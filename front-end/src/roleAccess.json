@@ -1,0 +1,78 @@
+{
+  "superAdmin": {
+    "defaultRoute": "/superAdmin/manage-institutions",
+    "allowedRoutes": [
+      "/superAdmin/elections",
+      "/superAdmin/manage-institutions",
+      "/superAdmin/manage-admins",
+      "/superAdmin/system-analytics",
+      "/superAdmin/system-settings",
+      "/superAdmin/results",
+      "/superAdmin/profile"
+    ],
+    "navItems": [
+      { "label": "Elections", "path": "/superAdmin/elections" },
+      { "label": "Manage Institutions", "path": "/superAdmin/manage-institutions" },
+      { "label": "System Analytics", "path": "/superAdmin/system-analytics" },
+      { "label": "System Settings", "path": "/superAdmin/system-settings" },
+      { "label": "View Results", "path": "/superAdmin/results" },
+      { "label": "Profile", "path": "/superAdmin/profile" }
+    ]
+  },
+  "electionAdmin": {
+    "defaultRoute": "/electionAdmin/create-election",
+    "allowedRoutes": [
+      "/electionAdmin/create-election",
+      "/electionAdmin/upload-voter-list",
+      "/electionAdmin/generate-credentials",
+      "/electionAdmin/manage-nominations",
+      "/electionAdmin/monitor-voting",
+      "/electionAdmin/publish-results",
+      "/electionAdmin/results",
+      "/electionAdmin/profile"
+    ],
+    "navItems": [
+      { "label": "Election", "path": "/electionAdmin/elections" },
+      { "label": "Voter List", "path": "/electionAdmin/voter-list" },
+      { "label": "Nominations", "path": "/electionAdmin/manage-nominations" },
+      { "label": "Monitor Voting", "path": "/electionAdmin/monitor-voting" },
+      { "label": "Publish Results", "path": "/electionAdmin/publish-results" },
+      { "label": "View Results", "path": "/electionAdmin/results" },
+      { "label": "Profile", "path": "/electionAdmin/profile" }
+    ]
+  },
+  "candidate": {
+    "defaultRoute": "/candidate/submit-nomination",
+    "allowedRoutes": [
+      "/candidate/Elections",
+      "/candidate/submit-nomination",
+      "/candidate/candidacy-status",
+      "/candidate/profile",
+      "/candidate/results"
+    ],
+    "navItems": [
+      { "label": "Elections", "path": "/candidate/elections" },
+      { "label": "Submit Nomination", "path": "/candidate/submit-nomination" },
+      { "label": "My Status", "path": "/candidate/my-nominations" },
+      { "label": "Profile", "path": "/candidate/profile" },
+      { "label": "View Results", "path": "/candidate/results" }
+    ]
+  },
+  "voter": {
+    "defaultRoute": "/voting/cast-vote",
+    "allowedRoutes": [
+      "/voter/elections",
+      "/voter/submit-nomination",
+      "/voter/voting-status",
+      "/voter/results",
+      "/voter/profile"
+    ],
+    "navItems": [
+      { "label": "Elections", "path": "/voter/elections" },
+      { "label": "Submit Nomination", "path": "/voter/submit-nomination" },
+      { "label": "My Status", "path": "/voter/voting-status" },
+      { "label": "View Results", "path": "/voter/results" },
+      { "label": "Profile", "path": "/voter/results" }
+    ]
+  }
+}

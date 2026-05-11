@@ -1,0 +1,450 @@
+/* =====================================================
+   UC1 — Login Page Styles (Responsive + Desktop preserved)
+   ===================================================== */
+
+.login-page {
+  display: flex;
+  min-height: calc(100vh - 5rem);
+  width: 100vw;
+  margin-top: 5rem;
+  background: var(--color-gray-0);
+}
+
+
+
+.login-side-form {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.login-inner-form-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem;
+  background: #fff;
+  border-radius: var(--radius-4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.login-form-title {
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Match original form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  margin-left: 0.25rem;
+}
+
+.login-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 1.1rem;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  padding: 1.1rem 1rem 1.1rem 3.2rem;
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--color-gray-900);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: var(--color-primary);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(210, 58, 1, 0.1);
+}
+
+.login-toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: var(--color-gray-400);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-toggle-password:hover {
+  color: var(--color-gray-600);
+}
+
+.login-field-error {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+}
+
+.login-error-banner {
+  background: var(--color-danger);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-2);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.login-extras-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.login-remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--color-gray-500);
+}
+
+.login-remember-me input {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.login-forgot-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-register-link {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  color: var(--color-gray-400);
+}
+
+.login-register-link a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button Styles */
+.login-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+
+
+.login-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.login-submit-btn.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS (Layout Only - No Color Changes)
+   ===================================================== */
+
+/* Tablet Landscape (1024px - 1200px) */
+@media screen and (max-width: 1200px) {
+  .login-side-visual {
+    flex: 1.2;
+  }
+
+  .login-side-form {
+    flex: 0.8;
+    padding: 3rem 1.5rem;
+  }
+
+  .login-inner-form-container {
+    max-width: 400px;
+    padding: 2.5rem;
+    margin: 1.5rem;
+  }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .login-page {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .login-side-visual {
+    flex: none;
+    height: 250px;
+    width: 100%;
+    background-position: center 30%;
+  }
+
+  .login-side-form {
+    flex: none;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .login-inner-form-container {
+    max-width: 500px;
+    margin: 1rem auto;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .login-form-title {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .login-side-visual {
+    height: 200px;
+  }
+
+  .login-side-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .login-inner-form-container {
+    padding: 1.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .login-form-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .login-form {
+    gap: 1.2rem;
+  }
+
+  .login-input {
+    padding: 0.9rem 0.9rem 0.9rem 3rem;
+    font-size: 16px;
+    /* Prevents zoom on iOS */
+  }
+
+  .login-input-icon {
+    left: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .login-label {
+    font-size: 0.8rem;
+  }
+
+  .login-extras-row {
+    font-size: 0.8rem;
+  }
+
+  .login-submit-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .login-register-link {
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Mobile Portrait (320px - 575px) */
+@media screen and (max-width: 575px) {
+  .login-side-visual {
+    height: 150px;
+  }
+
+  .login-inner-form-container {
+    padding: 1.2rem;
+  }
+
+  .login-form-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .login-field-group {
+    gap: 0.5rem;
+  }
+
+  .login-input {
+    padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+  }
+
+  .login-input-icon {
+    left: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .login-extras-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .login-remember-me {
+    font-size: 0.8rem;
+  }
+
+  .login-forgot-link {
+    font-size: 0.8rem;
+  }
+
+  .login-submit-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .login-register-link {
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .login-error-banner {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices (below 320px) */
+@media screen and (max-width: 319px) {
+  .login-inner-form-container {
+    padding: 1rem;
+  }
+
+  .login-form-title {
+    font-size: 1rem;
+  }
+
+  .login-input {
+    padding: 0.7rem 0.7rem 0.7rem 2.5rem;
+    font-size: 14px;
+  }
+
+  .login-input-icon {
+    left: 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* =====================================================
+   DESKTOP ENHANCEMENTS (Hover Effects - Desktop Only)
+   ===================================================== */
+
+@media (min-width: 1024px) {
+  .login-input:hover {
+    border-color: var(--color-primary);
+  }
+
+  .login-toggle-password:hover {
+    color: var(--color-gray-600);
+  }
+
+  .login-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
