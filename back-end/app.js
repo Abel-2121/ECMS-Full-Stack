@@ -1,3 +1,4 @@
+// backend/app.js
 const express = require("express");
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -19,7 +20,11 @@ const systemSettingsRoute = require('./route/systemSettingsRoute');
 const adminRoute = require('./route/adminRoute');
 const compression = require('compression');
 
+// Import upload config to check storage mode
+const { USE_LOCAL_STORAGE } = require('./middleware/upload');
+
 const app = express();
+
 app.use(compression({
   threshold: 2048,  
   level: 6,
@@ -30,6 +35,7 @@ app.use(compression({
     return compression.filter(req, res);
   }
 }));
+
 applySecurity(app);
 
 const allowedOrigins = process.env.FRONTEND_URL || 'http://localhost:5173';
@@ -43,17 +49,19 @@ app.use(cors({
 
 app.use(cookieParser());
 
-// ========== STATIC FILES ==========
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+if (USE_LOCAL_STORAGE) {
+  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+  console.log(' Serving local uploads from: uploads/');
+} else {
+  console.log(' Using Cloudinary for file storage (no local static serving)');
+}
 
-// Public files
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get("/health", (req, res) => {
   res.status(200).json({ status: 'OK', time: new Date() });
 });
 
-// ========== ROUTES ==========
 app.use("/api/auth", userRouter);
 app.use("/api/admin", adminRoute);
 app.use("/api/institution", institutionRoute);
@@ -66,6 +74,7 @@ app.use("/api/dashboard", dashboardRoute);
 app.use("/api/election-admin/dashboard", electionAdminDashboardRoute);
 app.use("/api/system-settings", systemSettingsRoute);
 
+// 404 handler
 app.all("/*splat", (req, res) => {
   res.status(404).json({
     status: 'fail',

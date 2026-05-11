@@ -8,6 +8,7 @@ const catchAsync = require('../utils/catchAsync');
 const VoterEligibilityLists = require('../model/VoterEligibilityLists');
 const AppError = require('../utils/appError');
 const { blockedStatus2 } = require('../utils/electionStatus');
+const { getPublicUrl } = require('../middleware/upload');
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -63,8 +64,9 @@ const candidateController = {
   
     let campaignPhoto = 'default-candidate.jpg';
     if (req.files && req.files.campaignPhoto) {
-      campaignPhoto = req.files.campaignPhoto[0].path;
+      campaignPhoto = getPublicUrl(req.files.campaignPhoto[0].path || req.files.campaignPhoto[0].filename);
     }
+    
   
     const docs = [];
     if (req.files && req.files.supportingDocuments) {

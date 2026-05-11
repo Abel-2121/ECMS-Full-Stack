@@ -11,6 +11,7 @@ const path = require('path');
 const { promisify } = require('util');
 const { sendEmailWithTemplate } = require('../services/emailTemplateService');
 const unlinkAsync = promisify(fs.unlink);
+const { getPublicUrl } = require('../middleware/upload');
 
 const voterEligibilityController = {
   uploadVoterList: catchAsync(async (req, res, next) => {
@@ -101,7 +102,7 @@ const voterEligibilityController = {
       institutionId: election.institutionId,
       uploadedBy: req.user.id,
       fileName: file.originalname,
-      fileUrl: file.path,
+      fileUrl: getPublicUrl(file.path || file.filename), 
       totalRecords: voters.length,
       validRecords: validRecords.length,
       invalidRecords: invalidRecords.length,

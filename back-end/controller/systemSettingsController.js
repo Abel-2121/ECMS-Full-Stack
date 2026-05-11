@@ -1,6 +1,7 @@
 const SystemSettings = require('../model/SystemSettings');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
+const { getPublicUrl } = require('../middleware/upload');
 
 const systemSettingsController ={ 
   getSettings: catchAsync(async (req, res, next) => {
@@ -146,7 +147,7 @@ const systemSettingsController ={
       settings = await SystemSettings.create({});
     }
 
-    const imageUrl = `/uploads/hero/${req.file.filename}`;
+    const imageUrl = getPublicUrl(req.file.path || req.file.filename);
     const newImage = { 
       url: imageUrl, 
       isActive: settings.hero?.images?.length === 0 

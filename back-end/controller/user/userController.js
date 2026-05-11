@@ -1,11 +1,10 @@
-// controller/user/userController.js
 const catchAsync = require('../../utils/catchAsync');
 const AppError = require('../../utils/appError');
 const User = require('../../model/userModel');
 const bcrypt = require('bcrypt');
+const { getPublicUrl } = require('../../middleware/upload');
 
 const userController = {
-  // Get current user profile
   getMyProfile: catchAsync(async (req, res, next) => {
     const user = await User.findById(req.user.id)
       .select('-password -refreshToken -passwordResetToken -passwordResetExpires')
@@ -85,7 +84,7 @@ const userController = {
     }
     
     // Build full URL for the avatar
-    const avatarUrl = `${req.protocol}://${req.get('host')}/${req.file.path.replace(/\\/g, '/')}`;
+    const avatarUrl = getPublicUrl(req.file.path || req.file.filename);
     
     const user = await User.findByIdAndUpdate(
       req.user.id,

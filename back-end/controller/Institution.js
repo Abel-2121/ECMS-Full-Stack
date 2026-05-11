@@ -8,7 +8,7 @@ const AppError = require('../utils/appError');
 const { sendEmailWithTemplate } = require('../services/emailTemplateService');
 const Candidate = require('../model/Candidates');
 const Vote = require('../model/Vote');
-
+const { getPublicUrl } = require('../middleware/upload');
 const institutionController = {
 createInstitutionWithAdmin: catchAsync(async (req, res, next) => {
   const {
@@ -516,6 +516,9 @@ createInstitutionWithAdmin: catchAsync(async (req, res, next) => {
       ));
     }
     
+    if (req.file) {
+    updateData.logo = getPublicUrl(req.file.path || req.file.filename);
+  }
     // SuperAdmin can only update status
     const updateData = {};
     if (status) {
@@ -523,6 +526,10 @@ createInstitutionWithAdmin: catchAsync(async (req, res, next) => {
       updateData.updatedBy = req.user.id;
     } else {
       return next(new AppError('SuperAdmin can only update institution status', 403));
+    }
+
+    if (req.file) {
+      updateData.logo = getPublicUrl(req.file.path || req.file.filename);
     }
     
     const updatedInstitution = await Institution.findByIdAndUpdate(
