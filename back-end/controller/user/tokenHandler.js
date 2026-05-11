@@ -13,7 +13,7 @@ const signTokens = (id, email) => {
   const accessToken = jwt.sign(
     { id, email },
     accessSecret,
-    { expiresIn: process.env.JWT_ACCESS_EXPIRES_IN || '15' }
+    { expiresIn: process.env.JWT_ACCESS_EXPIRES_IN || '1d' }
   );
   
   const refreshToken = jwt.sign(

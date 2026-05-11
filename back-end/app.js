@@ -32,9 +32,10 @@ app.use(compression({
 }));
 applySecurity(app);
 
-// ========== CORS ==========
+const allowedOrigins = process.env.FRONTEND_URL || 'http://localhost:5173';
+
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization']

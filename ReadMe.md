@@ -30,12 +30,5 @@ ECMS is a comprehensive web-based election management platform that provides sec
 - Axios
 - React Icons
 
-## Installation
 
-### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB
-- npm or yarn
-
-### Backend Setup
 
