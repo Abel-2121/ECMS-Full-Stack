@@ -1,6 +1,6 @@
 // backend/route/institutionRoute.js
 const express = require('express');
-const institutionController = require('../controller/institution');
+const institutionController = require('../controller/Institution');
 const authMiddleware = require('../middleware/authMiddleware');
 const { uploadInstitutionLogo } = require('../middleware/upload');
 
