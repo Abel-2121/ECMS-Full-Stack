@@ -5,7 +5,7 @@ const Result = require('../../model/Result');
 const Vote = require('../../model/Vote');
 const Candidate = require('../../model/Candidates');
 const VoterEligibilityLists = require('../../model/VoterEligibilityLists');
-const { validateElectionDates } = require('./dateValidator');
+const { validateElectionDates } = require('./datevalidator');
 const {blockedStatus1,blockedStatus2} = require('../../utils/electionStatus')
 const electionController = {
 
