@@ -68,10 +68,10 @@ const styles = {
     marginBottom: '10px', 
     fontSize: '15px', 
     fontWeight: '800',
-    color: '#6b7280',
+    color: '#030303',
     transition: 'all 0.3s ease',
     zIndex: 2,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   stepNumberActive: { 
     background: '#D23A01', 
@@ -84,11 +84,11 @@ const styles = {
   },
   stepLabel: { 
     fontSize: 'clamp(10px, 2.5vw, 13px)', 
-    color: '#9ca3af',
+    color: '#000000',
     fontWeight: '600',
     transition: 'all 0.3s ease',
     textAlign: 'center',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   stepLabelActive: { 
     color: '#D23A01', 

@@ -779,7 +779,7 @@ const styles = {
   },
   documentDate: {
     fontSize: '11px',
-    color: '#94a3b8'
+    color: '#000000'
   },
   downloadLink: {
     display: 'flex',
@@ -805,7 +805,7 @@ const styles = {
     alignItems: 'center',
     gap: '10px',
     fontSize: '13px',
-    color: '#475569',
+    color: '#000000',
     flexWrap: 'wrap'
   },
   modalOverlay: {
@@ -835,7 +835,7 @@ const styles = {
   },
   modalText: {
     fontSize: '14px',
-    color: '#475569',
+    color: '#000000',
     marginBottom: '12px'
   },
   modalWarning: {

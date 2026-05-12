@@ -19,7 +19,7 @@ const Home = () => {
       minHeight: '100vh',
       background: 'white',
       paddingTop: 'clamp(30px, 2vh, 50px)',
-      fontFamily: "'Poppins', sans-serif"
+      
     }
   };
 

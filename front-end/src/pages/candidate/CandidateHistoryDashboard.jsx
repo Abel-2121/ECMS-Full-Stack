@@ -1086,7 +1086,7 @@ const styles = {
     border: 'none',
     fontSize: '28px',
     cursor: 'pointer',
-    color: '#94a3b8',
+    color: '#000000',
     zIndex: 1
   },
   modalHeader: {
@@ -1110,7 +1110,7 @@ const styles = {
   },
   detailLabel: {
     fontWeight: '600',
-    color: '#4b5563',
+    color: '#000000',
     minWidth: '100px'
   },
   detailDivider: {
@@ -1127,7 +1127,7 @@ const styles = {
   detailText: {
     margin: '0 0 20px 0',
     fontSize: '14px',
-    color: '#4b5563',
+    color: '#000000',
     lineHeight: '1.5'
   }
 };

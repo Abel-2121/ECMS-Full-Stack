@@ -1,6 +1,7 @@
 // pages/electionAdmin/VoterListManager.jsx
 import React, { useState, useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { 
   FiPlus, FiEdit2, FiTrash2, FiSearch, FiRefreshCw,
   FiUpload, FiDownload, FiX, FiCheck, FiAlertCircle, FiUsers,
@@ -20,10 +21,11 @@ import {
 } from '../../Js/voterList-slice';
 import VoterTable from './VoterTable';
 import { securityValidators } from '../../utils/validators';
-import ErrorModal from '../../components/ErrorModal'; 
+import ErrorModal from '../../components/ErrorModal';
 
 const VoterListManager = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { elections } = useSelector(state => state.election);
   const { 
     voters, 
@@ -86,7 +88,7 @@ const VoterListManager = () => {
     }
   }, [selectedElection, currentPage, searchTerm]);
 
-  // ✅ Show error modal when error from Redux changes
+  // Show error modal when error from Redux changes
   useEffect(() => {
     if (error) {
       setErrorModal({ isOpen: true, message: error });
@@ -289,14 +291,14 @@ const VoterListManager = () => {
     dispatch(clearError());
   };
 
-  const startRecord = voters.length > 0 ? (currentPage - 1) * limit + 1 : 0;
-  const endRecord = Math.min(currentPage * limit, totalRecords);
-  const showPagination = !loading && voters.length > 0 && totalPages > 1;
-
   const getSelectedElectionTitle = () => {
     const election = sortedElections.find(e => e._id === selectedElection);
     return election?.title || 'Select Election';
   };
+
+  const startRecord = voters.length > 0 ? (currentPage - 1) * limit + 1 : 0;
+  const endRecord = Math.min(currentPage * limit, totalRecords);
+  const showPagination = !loading && voters.length > 0 && totalPages > 1;
 
   const showFieldError = (field) => {
     return touched[field] && fieldErrors[field];
@@ -304,7 +306,7 @@ const VoterListManager = () => {
 
   return (
     <div style={styles.container}>
-      {/* ✅ Error Modal - Reusable */}
+      
       <ErrorModal 
         isOpen={errorModal.isOpen}
         message={errorModal.message}
@@ -377,6 +379,17 @@ const VoterListManager = () => {
               </button>
               <button style={styles.addBtn} onClick={handleAddClick}>
                 <FiPlus size={16} /> Add Voter
+              </button>
+              <button 
+                style={styles.uploadBtn} 
+                onClick={() => navigate('/electionAdmin/upload-voters', { 
+                  state: { 
+                    preselectedElectionId: selectedElection,
+                    electionTitle: getSelectedElectionTitle()
+                  } 
+                })}
+              >
+                <FiUpload size={16} /> Upload Voter
               </button>
               <button style={styles.deleteAllBtn} onClick={handleDeleteAllClick}>
                 <FiTrash2 size={16} /> Delete All
@@ -805,6 +818,20 @@ const styles = {
     gap: '8px', 
     padding: '10px 20px', 
     background: '#D23A01', 
+    color: 'white', 
+    border: 'none', 
+    borderRadius: '10px', 
+    cursor: 'pointer',
+    fontSize: '13px',
+    fontWeight: '700',
+    fontFamily: "'Poppins', sans-serif"
+  },
+  uploadBtn: { 
+    display: 'flex', 
+    alignItems: 'center', 
+    gap: '8px', 
+    padding: '10px 20px', 
+    background: '#023430',
     color: 'white', 
     border: 'none', 
     borderRadius: '10px', 

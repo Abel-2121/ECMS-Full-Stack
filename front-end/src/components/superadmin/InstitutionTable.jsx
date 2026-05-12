@@ -140,7 +140,6 @@ const styles = {
     fontWeight: '800',
     fontSize: '16px',
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif",
     borderBottom: '1px solid #e5e7eb'
   },
   row: { 
@@ -152,7 +151,7 @@ const styles = {
     verticalAlign: 'middle',
     fontSize: '15px',
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   cellContent: {
     display: 'flex',
@@ -163,11 +162,11 @@ const styles = {
     fontWeight: '800', 
     color: '#000000',
     fontSize: '17px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   instAbout: { 
     fontSize: '13px', 
-    color: '#4b5563',
+    color: '#000000',
     marginTop: '2px',
     lineHeight: '1.4'
   },
@@ -187,7 +186,7 @@ const styles = {
   },
   phone: {
     fontSize: '13px',
-    color: '#6b7280',
+    color: '#000000',
     marginTop: '2px'
   },
   date: {
@@ -234,7 +233,6 @@ const styles = {
     textAlign: 'center', 
     padding: '50px', 
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif",
     fontSize: '16px',
     fontWeight: '500'
   },
@@ -242,7 +240,6 @@ const styles = {
     textAlign: 'center', 
     padding: '50px', 
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif",
     fontSize: '16px',
     display: 'flex',
     flexDirection: 'column',

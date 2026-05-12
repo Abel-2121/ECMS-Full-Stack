@@ -92,14 +92,14 @@ const styles = {
     fontWeight: '600',
     color: '#6b7280',
     marginBottom: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   value: {
     fontSize: '24px',
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   progressBar: {
     height: '4px',

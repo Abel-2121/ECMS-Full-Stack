@@ -271,7 +271,7 @@ const styles = {
     fontSize: 'clamp(18px, 4vw, 20px)', 
     fontWeight: '700', 
     color: '#1a1a1a', 
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerActions: { 
     display: 'flex', 
@@ -287,7 +287,7 @@ const styles = {
     background: '#f1f5f9', 
     padding: '8px 16px', 
     borderRadius: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   refreshBtn: { 
     display: 'flex', 
@@ -301,7 +301,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '14px', 
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   welcomeCard: { 
     display: 'flex', 
@@ -320,14 +320,14 @@ const styles = {
     fontWeight: '800', 
     marginBottom: '8px', 
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   welcomeText: { 
     fontSize: '14px', 
     opacity: 0.9, 
     margin: 0, 
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   createElectionBtn: { 
     display: 'flex', 
@@ -341,7 +341,7 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '700', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   kpiGrid: { 
     display: 'grid', 
@@ -371,21 +371,21 @@ const styles = {
     fontSize: 'clamp(26px, 5vw, 32px)', 
     fontWeight: '800', 
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   kpiLabel: { 
     fontSize: '14px', 
     color: '#4b5563', 
     fontWeight: '600', 
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   kpiChange: { 
     fontSize: '12px', 
     color: '#6b7280', 
     marginTop: '4px', 
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartsRow: { 
     display: 'grid', 
@@ -413,13 +413,13 @@ const styles = {
     display: 'flex', 
     alignItems: 'center', 
     gap: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartSubtitle: { 
     fontSize: '13px', 
     color: '#6b7280', 
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionHeader: { 
     display: 'flex', 
@@ -434,7 +434,7 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   liveBadge: { 
     fontSize: '11px', 
@@ -475,7 +475,7 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '700', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   noElectionCard: { 
     textAlign: 'center', 
@@ -526,7 +526,7 @@ const styles = {
     fontSize: '15px', 
     fontWeight: '700', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   deadlineType: { 
     fontSize: '12px', 
@@ -569,7 +569,7 @@ const styles = {
     fontSize: '14px', 
     fontWeight: '700', 
     transition: 'all 0.2s',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   activitiesCard: { 
     background: 'white', 
@@ -601,7 +601,7 @@ const styles = {
     fontSize: '14px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   activityTime: { 
     fontSize: '12px', 
@@ -640,7 +640,7 @@ const styles = {
     fontSize: '13px', 
     fontWeight: '600', 
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tableWrapper: { 
     overflowX: 'auto' 
@@ -660,7 +660,6 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif",
     borderBottom: '1px solid #e5e7eb'
   },
   tableRow: {
@@ -672,13 +671,13 @@ const styles = {
     verticalAlign: 'middle',
     fontSize: '14px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionName: { 
     fontSize: '15px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statusBadge: { 
     padding: '6px 14px', 
@@ -709,14 +708,14 @@ const styles = {
     fontSize: '13px', 
     fontWeight: '600', 
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   noData: { 
     textAlign: 'center', 
     padding: '40px', 
     color: '#6b7280', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   loaderContainer: { 
     display: 'flex', 
@@ -729,7 +728,7 @@ const styles = {
   loaderText: {
     fontSize: '16px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: { 
     width: '50px', 

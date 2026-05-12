@@ -1,5 +1,6 @@
 // backend/controller/adminController.js
 const User = require('../model/userModel');
+const Election = require('../model/Election');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const { sendEmailWithTemplate } = require('../services/emailTemplateService');

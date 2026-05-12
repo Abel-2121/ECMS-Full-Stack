@@ -233,7 +233,7 @@ const styles = {
     minHeight: '100vh',
     background: 'linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%)',
     padding: 'clamp(16px, 4vw, 24px)',
-    fontFamily: "'Poppins', sans-serif"
+
   },
   card: {
     background: 'white',
@@ -266,19 +266,18 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+
   },
   subtitle: {
     color: '#6b7280',
     marginBottom: '8px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+   
   },
   emailText: {
     color: '#D23A01',
     fontSize: '16px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif",
     display: 'inline-block',
     marginTop: '4px'
   },
@@ -294,7 +293,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     border: '1px solid #fecaca',
-    fontFamily: "'Poppins', sans-serif"
+  
   },
   errorClose: {
     background: 'none',
@@ -322,7 +321,6 @@ const styles = {
     outline: 'none',
     transition: 'all 0.2s ease',
     background: '#ffffff',
-    fontFamily: "'Poppins', sans-serif",
     boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
   },
   submitBtn: {
@@ -336,7 +334,7 @@ const styles = {
     fontWeight: '700',
     transition: 'all 0.2s ease',
     marginBottom: '24px',
-    fontFamily: "'Poppins', sans-serif",
+   
     cursor: 'pointer'
   },
   btnFlex: {
@@ -355,7 +353,7 @@ const styles = {
     color: '#6b7280',
     marginBottom: '8px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   resendBtn: {
     background: 'none',
@@ -364,7 +362,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
+  
     transition: 'all 0.2s ease'
   },
   resendTimer: {
@@ -373,7 +371,7 @@ const styles = {
     gap: '6px',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+   
   }
 };
 

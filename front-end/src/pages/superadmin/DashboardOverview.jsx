@@ -454,12 +454,12 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     marginBottom: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   welcomeText: { 
     fontSize: '13px', 
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerActions: { 
     display: 'flex', 
@@ -476,7 +476,7 @@ const styles = {
     background: '#D23A0110', 
     padding: '6px 12px', 
     borderRadius: '30px',
-    fontFamily: "'Poppins', sans-serif",
+    
     fontWeight: '500'
   },
   lastUpdated: { 
@@ -488,7 +488,7 @@ const styles = {
     background: '#f1f5f9', 
     padding: '6px 12px', 
     borderRadius: '30px',
-    fontFamily: "'Poppins', sans-serif",
+    
     fontWeight: '500'
   },
   refreshBtn: { 
@@ -503,7 +503,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '12px', 
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.3s ease'
   },
   kpiGrid: { 
@@ -537,19 +537,18 @@ const styles = {
     fontSize: '26px', 
     fontWeight: '800', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   kpiTitle: { 
     fontSize: '18px', 
     color: '#111316',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   kpiChange: { 
     fontSize: '15px', 
     color: '#D23A01', 
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartsRow: { 
     display: 'grid', 
@@ -580,12 +579,12 @@ const styles = {
     display: 'flex', 
     alignItems: 'center', 
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartSubtitle: { 
     fontSize: '11px', 
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartStats: { 
     display: 'flex', 
@@ -594,8 +593,8 @@ const styles = {
     paddingTop: '12px', 
     borderTop: '1px solid #e5e7eb', 
     fontSize: '11px', 
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
+
     fontWeight: '500',
     flexWrap: 'wrap',
     gap: '8px'
@@ -629,14 +628,13 @@ const styles = {
     fontSize: '16px',
     fontWeight: '700',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
+  
     borderBottom: '2px solid #e5e7eb'
   },
   td: {
     padding: '10px 10px',
     fontSize: '16px',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     borderBottom: '1px solid #e5e7eb'
   },
   cellInstitution: { 
@@ -648,25 +646,25 @@ const styles = {
     width: '28px', 
     fontWeight: '800', 
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   institutionName: { 
     fontSize: '15px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   institutionCode: { 
     fontSize: '13px', 
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   statusBadge: { 
     padding: '3px 10px', 
     borderRadius: '30px', 
     fontSize: '11px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif",
+    
     display: 'inline-block'
   },
   tableFooter: { 
@@ -676,8 +674,8 @@ const styles = {
     paddingTop: '12px', 
     borderTop: '1px solid #e5e7eb', 
     fontSize: '11px', 
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
+    
     fontWeight: '500',
     flexWrap: 'wrap',
     gap: '10px'
@@ -710,7 +708,7 @@ const styles = {
     width: '35px', 
     fontWeight: '800', 
     fontSize: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   topInfo: { 
     flex: 1 
@@ -719,13 +717,13 @@ const styles = {
     fontSize: '13px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   topMeta: { 
     fontSize: '10px', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginTop: '2px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   progressBar: { 
     height: '4px', 
@@ -742,7 +740,7 @@ const styles = {
   topScore: { 
     fontSize: '15px', 
     fontWeight: '800',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   viewAllBtn: { 
     width: '100%', 
@@ -754,7 +752,6 @@ const styles = {
     fontSize: '16px', 
     fontWeight: '600',
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s ease'
   },
   viewAllBtnSmall: { 
@@ -765,8 +762,8 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '14px', 
     fontWeight: '600',
-    color: '#023430',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#020706',
+  
     transition: 'all 0.2s ease'
   },
   activitiesCard: { 
@@ -807,13 +804,13 @@ const styles = {
     fontSize: '15px', 
     fontWeight: '600', 
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   activityTime: { 
     fontSize: '14px', 
     color: '#17191d', 
     marginTop: '2px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   quickActionsCard: { 
     background: 'white', 
@@ -841,7 +838,6 @@ const styles = {
     fontSize: '15px', 
     fontWeight: '600', 
     color: '#011413',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s ease'
   },
   loaderContainer: { 
@@ -855,7 +851,6 @@ const styles = {
   loaderText: {
     fontSize: '14px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   spinner: { 
@@ -869,15 +864,14 @@ const styles = {
   emptyState: { 
     textAlign: 'center', 
     padding: '30px', 
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     fontSize: '12px'
   },
   emptyStateSmall: { 
     textAlign: 'center', 
     padding: '20px', 
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
+  
     fontSize: '11px'
   }
 };

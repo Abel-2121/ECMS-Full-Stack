@@ -408,7 +408,7 @@ const styles = {
     fontWeight: '500',
     marginBottom: '16px',
     padding: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerContent: {
     textAlign: 'center'
@@ -429,12 +429,12 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerSubtitle: {
     fontSize: '14px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   content: {
     padding: 'clamp(20px, 4vw, 24px)'
@@ -467,7 +467,7 @@ const styles = {
     fontWeight: '700',
     margin: 0,
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   editBtn: {
     display: 'flex',
@@ -481,7 +481,7 @@ const styles = {
     fontSize: '11px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sectionContent: {
     padding: '20px'
@@ -498,14 +498,13 @@ const styles = {
     fontSize: '13px',
     fontWeight: '600',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   infoValue: {
     flex: 1,
     fontSize: '13px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     display: 'flex',
     alignItems: 'center',
     gap: '6px'
@@ -534,7 +533,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '700',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sloganText: {
     fontSize: '16px',
@@ -542,21 +541,21 @@ const styles = {
     color: '#D23A01',
     marginBottom: '10px',
     padding: '0 8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   manifestoText: {
     fontSize: '13px',
     lineHeight: '1.6',
-    color: '#4b5563',
+    color: '#050607',
     marginBottom: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   bioText: {
     fontSize: '13px',
     lineHeight: '1.6',
-    color: '#4b5563',
+    color: '#0a0b0e',
     marginBottom: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   wordCountBadge: {
     display: 'inline-flex',
@@ -567,8 +566,8 @@ const styles = {
     borderRadius: '20px',
     fontSize: '10px',
     fontWeight: '500',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#070708',
+    
   },
   photoCard: {
     padding: '16px',
@@ -599,12 +598,12 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   fileSize: {
     fontSize: '11px',
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   docCount: {
     fontSize: '12px',
@@ -612,8 +611,8 @@ const styles = {
     padding: '2px 8px',
     background: '#e5e7eb',
     borderRadius: '12px',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#050608',
+    
   },
   documentCard: {
     display: 'flex',
@@ -636,7 +635,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   documentMeta: {
     display: 'flex',
@@ -651,12 +650,12 @@ const styles = {
     color: '#D23A01',
     borderRadius: '12px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   docSize: {
     fontSize: '10px',
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   documentCheck: {
     color: '#10b981',
@@ -680,7 +679,7 @@ const styles = {
     fontWeight: '700',
     margin: 0,
     color: '#166534',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   declarationList: {
     display: 'flex',
@@ -694,7 +693,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   notice: {
     display: 'flex',
@@ -713,7 +712,7 @@ const styles = {
     fontSize: '12px',
     color: '#92400e',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   actionButtons: {
     display: 'flex',
@@ -731,8 +730,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     transition: 'all 0.2s'
   },
   submitBtn: {
@@ -749,7 +747,6 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     color: 'white',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   spinner: {

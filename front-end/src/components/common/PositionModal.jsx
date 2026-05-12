@@ -59,7 +59,7 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       fontSize: '24px',
       fontWeight: '800',
       marginBottom: '8px',
-      fontFamily: "'Poppins', sans-serif",
+    
       letterSpacing: '-0.3px',
     },
     modalPositionMeta: {
@@ -77,13 +77,13 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       display: 'flex',
       alignItems: 'center',
       gap: '6px',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     modalPositionDesc: {
       fontSize: '14px',
       opacity: 0.85,
       lineHeight: '1.6',
-      fontFamily: "'Poppins', sans-serif",
+    
     },
     modalBody: {
       padding: '24px',
@@ -105,15 +105,15 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       fontSize: '26px',
       fontWeight: '800',
       color: '#D23A01',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     infoCardLabel: {
       fontSize: '11px',
-      color: '#6b7280',
+      color: '#0f1013',
       marginTop: '6px',
       textTransform: 'uppercase',
       fontWeight: '600',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     modalSection: {
       marginBottom: '24px',
@@ -128,7 +128,7 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       gap: '10px',
       paddingBottom: '8px',
       borderBottom: '2px solid #e5e7eb',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     allocationList: {
       display: 'flex',
@@ -149,19 +149,19 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       fontWeight: '800',
       color: '#D23A01',
       fontSize: '15px',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     allocationRole: {
       flex: 1,
       fontWeight: '600',
       color: '#1a1a1a',
       fontSize: '14px',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     allocationDesc: {
       fontSize: '12px',
-      color: '#6b7280',
-      fontFamily: "'Poppins', sans-serif",
+      color: '#000000',
+      
     },
     rulesList: {
       display: 'flex',
@@ -175,10 +175,10 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       background: '#f8fafc',
       borderRadius: '10px',
       fontSize: '13px',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     ruleLabel: {
-      color: '#6b7280',
+      color: '#010102',
       fontWeight: '500',
     },
     ruleValue: {
@@ -195,9 +195,9 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       background: '#f1f5f9',
       borderRadius: '30px',
       fontSize: '12px',
-      color: '#4b5563',
+      color: '#040405',
       fontWeight: '500',
-      fontFamily: "'Poppins', sans-serif",
+      
     },
     modalCandidatesList: {
       display: 'flex',
@@ -225,7 +225,7 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       justifyContent: 'center',
       fontSize: '13px',
       fontWeight: '800',
-      color: '#4b5563',
+      color: '#000000',
     },
     candidateInfo: {
       flex: 1,
@@ -234,19 +234,17 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       fontSize: '15px',
       fontWeight: '700',
       color: '#1a1a1a',
-      fontFamily: "'Poppins', sans-serif",
+
     },
     candidateVotes: {
       fontSize: '12px',
-      color: '#6b7280',
+      color: '#0b0d11',
       marginTop: '2px',
-      fontFamily: "'Poppins', sans-serif",
     },
     candidatePercentage: {
       fontSize: '15px',
       fontWeight: '700',
       color: '#D23A01',
-      fontFamily: "'Poppins', sans-serif",
     },
     modalFooter: {
       padding: '16px 24px',
@@ -265,7 +263,6 @@ const PositionModal = ({ position, isOpen, onClose }) => {
       fontWeight: '600',
       color: 'white',
       transition: 'all 0.2s',
-      fontFamily: "'Poppins', sans-serif",
     },
   };
 

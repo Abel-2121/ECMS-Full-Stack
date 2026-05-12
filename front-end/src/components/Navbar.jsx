@@ -20,7 +20,6 @@ const Navbar = () => {
   const { user } = useSelector(state => state.auth);
   const userRole = user?.role;
 
-  // ✅ Get profile picture URL (added same as Header)
   const getProfilePicture = () => {
     if (user?.photo) {
       if (user.photo.startsWith('http')) {

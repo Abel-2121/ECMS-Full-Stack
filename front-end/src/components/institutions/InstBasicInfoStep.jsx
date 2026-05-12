@@ -213,13 +213,13 @@ const styles = {
     fontWeight: '700', 
     marginBottom: '8px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: { 
-    color: '#4b5563', 
+    color: '#000000', 
     marginBottom: '28px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   formContainer: { 
     display: 'flex', 
@@ -243,7 +243,7 @@ const styles = {
     fontSize: '14px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   required: { 
     color: '#D23A01', 
@@ -255,7 +255,6 @@ const styles = {
     border: '2px solid #e5e7eb', 
     borderRadius: '12px', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s'
   },
@@ -269,7 +268,7 @@ const styles = {
     color: '#dc2626',
     marginTop: '4px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   textarea: { 
     width: '100%', 
@@ -277,7 +276,6 @@ const styles = {
     border: '2px solid #e5e7eb', 
     borderRadius: '12px', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     resize: 'vertical', 
     outline: 'none',
     transition: 'all 0.2s'

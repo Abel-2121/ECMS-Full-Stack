@@ -480,20 +480,20 @@ const styles = {
     fontSize: '14px',
     fontWeight: '500',
     padding: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionTitle: {
     fontSize: 'clamp(18px, 4vw, 20px)',
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   requiredHint: {
     fontSize: '12px',
     color: '#6b7280',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   requiredStar: {
     color: '#dc2626',
@@ -527,7 +527,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '600',
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   formGroup: { 
     marginBottom: '24px' 
@@ -538,7 +538,7 @@ const styles = {
     marginBottom: '8px', 
     color: '#1a1a1a',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   input: { 
     width: '100%', 
@@ -547,7 +547,7 @@ const styles = {
     borderRadius: '12px', 
     fontSize: '14px', 
     transition: 'border-color 0.2s',
-    fontFamily: "'Poppins', sans-serif",
+    ,
     outline: 'none'
   },
   textarea: { 
@@ -557,7 +557,7 @@ const styles = {
     borderRadius: '12px', 
     resize: 'vertical', 
     fontSize: '14px', 
-    fontFamily: "'Poppins', sans-serif",
+    ,
     outline: 'none'
   },
   wordCountContainer: {
@@ -571,7 +571,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorText: {
     fontSize: '11px',
@@ -579,7 +579,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoUploadContainer: {
     display: 'flex',
@@ -606,13 +606,13 @@ const styles = {
     fontSize: '12px',
     color: '#6b7280',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoHint: {
     fontSize: '10px',
     color: '#9ca3af',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoPreviewContainer: {
     position: 'relative'
@@ -645,7 +645,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '11px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoRemoveBtn: {
     display: 'flex',
@@ -659,7 +659,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '11px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   fileUpload: { 
     display: 'flex', 
@@ -677,7 +677,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    ,
     transition: 'all 0.2s'
   },
   documentList: { 
@@ -706,7 +706,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   documentTypeBadge: { 
     fontSize: '10px', 
@@ -715,7 +715,7 @@ const styles = {
     color: '#D23A01', 
     borderRadius: '12px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   removeDocBtn: { 
     background: 'none', 
@@ -751,7 +751,7 @@ const styles = {
     fontWeight: '700',
     marginBottom: '12px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownFile: {
     fontSize: '13px',
@@ -761,7 +761,7 @@ const styles = {
     backgroundColor: '#f8fafc',
     borderRadius: '8px',
     wordBreak: 'break-all',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownSelect: {
     width: '100%',
@@ -770,7 +770,7 @@ const styles = {
     borderRadius: '10px',
     fontSize: '14px',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif",
+    ,
     outline: 'none'
   },
   dropdownActions: {
@@ -787,7 +787,7 @@ const styles = {
     color: '#4b5563',
     fontWeight: '600',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownConfirmBtn: {
     padding: '10px 18px',
@@ -798,7 +798,7 @@ const styles = {
     color: 'white',
     fontWeight: '700',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   actionButtons: { 
     display: 'flex', 
@@ -820,7 +820,7 @@ const styles = {
     alignItems: 'center', 
     justifyContent: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif",
+    ,
     transition: 'background 0.2s'
   },
   secondaryBtn: { 
@@ -833,7 +833,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    ,
     transition: 'all 0.2s'
   }
 };

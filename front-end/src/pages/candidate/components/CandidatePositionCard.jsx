@@ -49,7 +49,7 @@ const CandidatePositionCard = ({ position, isSelected, onSelect }) => {
 const styles = {
   card: {
     padding: '18px',
-    border: '2px solid #e5e7eb',
+    border: '2px solid #686869',
     borderRadius: '14px',
     cursor: 'pointer',
     transition: 'all 0.2s ease',
@@ -74,7 +74,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionMeta: {
     display: 'flex',
@@ -88,7 +88,7 @@ const styles = {
     color: '#D23A01',
     borderRadius: '20px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionSeats: {
     fontSize: '11px',
@@ -97,7 +97,7 @@ const styles = {
     color: '#4b5563',
     borderRadius: '20px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionDesc: {
     fontSize: '13px',
@@ -105,7 +105,7 @@ const styles = {
     marginTop: '12px',
     paddingTop: '12px',
     borderTop: '1px solid #e5e7eb',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   checkIcon: {
     marginLeft: 'auto',

@@ -422,7 +422,7 @@ const styles = {
   loaderText: {
     fontSize: '15px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: { 
     width: '50px', 
@@ -450,13 +450,13 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   notPublishedText: {
     fontSize: '14px',
     color: '#6b7280',
     marginBottom: '24px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   backBtn: { 
     padding: '12px 28px', 
@@ -467,7 +467,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   header: { 
     display: 'flex', 
@@ -485,7 +485,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   titleIcon: {
     color: '#D23A01'
@@ -493,7 +493,7 @@ const styles = {
   subtitle: { 
     fontSize: '14px', 
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerActions: { 
     display: 'flex', 
@@ -510,8 +510,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px', 
     fontWeight: '600',
-    color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#070707',
     transition: 'all 0.2s'
   },
   selectorCard: { 
@@ -528,7 +527,7 @@ const styles = {
     fontWeight: '700', 
     marginBottom: '8px', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   selector: { 
     width: '100%', 
@@ -538,14 +537,14 @@ const styles = {
     fontSize: '14px', 
     background: '#fff', 
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
+
     color: '#1a1a1a'
   },
   selectorHint: {
     fontSize: '12px',
-    color: '#6b7280',
+    color: '#000000',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   heroSection: { 
     background: 'linear-gradient(135deg, #023430 0%, #011a18 100%)', 
@@ -574,7 +573,6 @@ const styles = {
     fontSize: 'clamp(22px, 5vw, 26px)', 
     fontWeight: '800', 
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif",
     color: "white"
   },
   electionMeta: { 
@@ -588,7 +586,7 @@ const styles = {
     gap: '8px', 
     fontSize: '13px', 
     opacity: 0.8,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   turnoutCard: { 
     display: 'flex', 
@@ -601,12 +599,12 @@ const styles = {
   turnoutValue: { 
     fontSize: '32px', 
     fontWeight: '800',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   turnoutLabel: { 
     fontSize: '12px', 
     opacity: 0.7,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   summaryGrid: { 
     display: 'grid', 
@@ -634,13 +632,12 @@ const styles = {
     fontSize: 'clamp(20px, 4vw, 24px)', 
     fontWeight: '800', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   summaryLabel: { 
     fontSize: '16px', 
-    color: '#4b5563', 
+    color: '#121418', 
     marginTop: '2px',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   winnersSection: { 
@@ -656,7 +653,7 @@ const styles = {
     marginBottom: '24px', 
     paddingBottom: '12px', 
     borderBottom: '2px solid #e5e7eb',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   winnersContainer: {
     display: 'flex',
@@ -671,9 +668,9 @@ const styles = {
     padding: '24px', 
     borderTop: '1px solid #e5e7eb', 
     fontSize: '12px', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginTop: '24px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   // Modal styles
   modalOverlay: { 
@@ -709,14 +706,14 @@ const styles = {
     margin: 0,
     display: 'flex',
     alignItems: 'center',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   modalClose: { 
     background: 'none', 
     border: 'none', 
     fontSize: '28px', 
     cursor: 'pointer', 
-    color: '#94a3b8' 
+    color: '#000000' 
   },
   modalBody: { 
     textAlign: 'center', 
@@ -729,13 +726,13 @@ const styles = {
     fontSize: '16px', 
     color: '#1a1a1a', 
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   deleteWarning: { 
     fontSize: '13px', 
     color: '#dc2626', 
     marginBottom: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   modalActions: { 
     display: 'flex', 
@@ -753,7 +750,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   confirmDeleteBtn: { 
     display: 'flex',
@@ -767,7 +764,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

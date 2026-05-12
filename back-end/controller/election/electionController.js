@@ -103,7 +103,7 @@ updateElection: catchAsync(async (req, res, next) => {
   if (!election) {
     return next(new AppError('Election not found', 404));
   }
-
+    
   if (blockedStatus1.includes(election.status)) {
     return next(new AppError('Update not allowed at this stage', 403));
   }
@@ -197,18 +197,17 @@ updateElection: catchAsync(async (req, res, next) => {
     data: { election: updatedElection }
   });
 }),
-  getElection: catchAsync(async (req, res, next) => {
+
+getElection: catchAsync(async (req, res, next) => {
     const { role, institutionId, email } = req.user;
     let filter = {};
-  
-    // SuperAdmin sees ALL elections across ALL institutions
     if (role === 'superAdmin') {
       filter = {}; // No filter - get all elections
     }
     else if (role === 'candidate' || role === 'electionAdmin') {
       filter = { institutionId };
     }
-    else if (role === 'user') {
+    else if (role === 'voter') {
       const eligibilityLists = await VoterEligibilityLists.find({
         'eligibleVoters.email': email
       }).lean();

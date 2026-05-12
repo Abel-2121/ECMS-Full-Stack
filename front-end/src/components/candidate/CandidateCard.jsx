@@ -7,15 +7,12 @@ const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:4001
 const getImageUrl = (imagePath) => {
   if (!imagePath) return null;
   
-  // If it's already a full URL, return as is
   if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
     return imagePath;
   }
   
-  // Fix Windows backslashes to forward slashes
   const normalizedPath = imagePath.replace(/\\/g, '/');
   
-  // Remove duplicate uploads prefix
   let cleanPath = normalizedPath;
   if (cleanPath.startsWith('uploads/')) {
     cleanPath = cleanPath;

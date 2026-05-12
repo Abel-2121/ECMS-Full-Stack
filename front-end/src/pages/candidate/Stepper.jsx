@@ -47,8 +47,8 @@ const styles = {
     justifyContent: 'space-between', 
     marginBottom: '40px',
     position: 'relative',
-    flexWrap: 'nowrap',  // ✅ NEVER WRAP
-    gap: '8px'  // Default gap between steps
+    flexWrap: 'nowrap',  
+    gap: '8px'  
   },
   step: { 
     display: 'flex', 

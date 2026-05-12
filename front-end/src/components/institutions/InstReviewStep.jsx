@@ -74,13 +74,13 @@ const styles = {
     fontWeight: '700', 
     marginBottom: '8px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: { 
-    color: '#4b5563', 
+    color: '#000000', 
     marginBottom: '24px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   section: { 
     marginBottom: '28px' 
@@ -95,7 +95,7 @@ const styles = {
     alignItems: 'center',
     gap: '8px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   reviewGrid: { 
     display: 'grid', 
@@ -107,7 +107,6 @@ const styles = {
     alignItems: 'center', 
     gap: '8px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a'
   },
   reviewItemFull: { 
@@ -115,7 +114,6 @@ const styles = {
     display: 'flex',
     gap: '8px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a'
   },
   icon: { 
@@ -133,7 +131,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

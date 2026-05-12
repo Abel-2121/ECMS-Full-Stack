@@ -1,4 +1,3 @@
-// pages/candidate/components/ElectionDetailPage.jsx
 import React from 'react';
 import { FiArrowLeft, FiCalendar, FiUsers, FiAward, FiArrowRight } from 'react-icons/fi';
 

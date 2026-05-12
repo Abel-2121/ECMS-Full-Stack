@@ -252,11 +252,11 @@ const HeroSection = ({ data }) => {
             <p style={styles.subtitle}>{heroData.subtitle}</p>
 
             <div style={styles.buttonGroup} className="hero-buttons">
-              {isAuthenticated && (
+            
                 <Link to="/request-institution" style={styles.primaryBtn}>
                   {heroData.ctaButtonText} <FiArrowRight size={14} />
                 </Link>
-              )}
+             
             </div>
 
             {/* Stats Section */}

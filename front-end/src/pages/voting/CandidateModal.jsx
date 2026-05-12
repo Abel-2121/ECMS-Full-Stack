@@ -85,7 +85,7 @@ const CandidateModal = ({ candidate, isOpen, onClose }) => {
 
 const styles = {
   overlay: { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(15,23,42,0.8)', backdropFilter: 'blur(8px)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(16px, 4vw, 20px)' },
-  modal: { background: 'white', borderRadius: 'clamp(20px, 5vw, 24px)', width: '100%', maxWidth: '560px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)', position: 'relative', fontFamily: 'Inter, system-ui, sans-serif' },
+  modal: { background: 'white', borderRadius: 'clamp(20px, 5vw, 24px)', width: '100%', maxWidth: '560px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)', position: 'relative',  },
   heroSection: { position: 'relative', height: 'clamp(280px, 40vh, 320px)', overflow: 'hidden' },
   heroImage: { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' },
   heroPlaceholder: { width: '100%', height: '100%', background: 'linear-gradient(135deg, #D23A01, #023430)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'clamp(48px, 10vw, 64px)', fontWeight: '700', color: 'white' },

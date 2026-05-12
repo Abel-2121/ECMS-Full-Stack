@@ -31,15 +31,16 @@ const BasicInfoStep = ({ data, onChange }) => {
     const { name, value } = e.target;
     let processedValue = value;
     
-    if (name === 'title') {
-      processedValue = securityValidators.sanitizeInput(value);
+if (name === 'title') {
+    processedValue =value
     }
-    
+
     onChange({ [name]: processedValue });
     if (!touchedFields[name]) {
       setTouchedFields(prev => ({ ...prev, [name]: true }));
     }
   };
+
 
   const handleBlur = (fieldName) => {
     setTouchedFields(prev => ({ ...prev, [fieldName]: true }));
@@ -121,19 +122,7 @@ const BasicInfoStep = ({ data, onChange }) => {
         </div>
       </div>
 
-      {Object.keys(validationErrors).length > 0 && Object.keys(touchedFields).length > 0 && (
-        <div style={styles.errorSummary}>
-          <FiAlertCircle size={18} color="#dc2626" />
-          <div style={styles.errorSummaryContent}>
-            <strong>Please fix the following issues:</strong>
-            <ul style={styles.errorList}>
-              {Object.values(validationErrors).map((error, idx) => (
-                <li key={idx}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+
 
       <div style={styles.formContent}>
         <div style={styles.formGroup}>

@@ -306,7 +306,7 @@ const styles = {
   loaderText: {
     fontSize: '15px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: { 
     width: '50px', 
@@ -332,7 +332,7 @@ const styles = {
     display: 'flex', 
     alignItems: 'center', 
     gap: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   titleIcon: {
     color: '#D23A01'
@@ -340,7 +340,7 @@ const styles = {
   subtitle: { 
     fontSize: 'clamp(14px, 3vw, 15px)', 
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   refreshBtn: { 
     display: 'flex', 
@@ -353,7 +353,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px', 
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   profileCard: { 
     display: 'flex', 
@@ -397,7 +397,7 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   userDetails: { 
     display: 'flex', 
@@ -416,12 +416,12 @@ const styles = {
     fontSize: 'clamp(28px, 5vw, 32px)', 
     fontWeight: '800', 
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statLabel: { 
     fontSize: '12px', 
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   contentGrid: { 
     display: 'grid', 
@@ -450,7 +450,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyState: { 
     textAlign: 'center', 
@@ -465,13 +465,13 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyText: {
     fontSize: '14px',
     color: '#6b7280',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   voteNowBtn: { 
     marginTop: '20px', 
@@ -486,7 +486,7 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   votesList: { 
     display: 'flex', 
@@ -515,7 +515,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     marginBottom: '6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   voteMeta: { 
     display: 'flex', 
@@ -543,7 +543,6 @@ const styles = {
     fontSize: '13px' 
   },
   confirmationCode: { 
-    fontFamily: 'monospace', 
     background: '#e2e8f0', 
     padding: '2px 6px', 
     borderRadius: '6px', 
@@ -566,7 +565,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '12px', 
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sidebar: { 
     display: 'flex', 
@@ -610,7 +609,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   eligibleList: { 
     display: 'flex', 
@@ -676,7 +675,7 @@ const styles = {
     padding: '10px 0', 
     borderBottom: '1px solid #e5e7eb', 
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

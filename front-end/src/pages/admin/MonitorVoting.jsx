@@ -354,7 +354,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   titleIcon: {
     color: '#D23A01'
@@ -362,7 +362,7 @@ const styles = {
   subtitle: {
     fontSize: 'clamp(13px, 3vw, 15px)',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Dropdown Selector
@@ -397,7 +397,6 @@ const styles = {
     borderRadius: '12px',
     fontSize: '15px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif",
     background: 'white',
     cursor: 'pointer',
     outline: 'none',
@@ -424,13 +423,13 @@ const styles = {
     borderRadius: '20px',
     fontSize: '12px',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   selectedName: {
     fontSize: '14px',
     fontWeight: '600',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // No Voting Elections Card
@@ -450,7 +449,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   noVotingText: {
     fontSize: '14px',
@@ -458,7 +457,7 @@ const styles = {
     maxWidth: '450px',
     margin: '0 auto',
     lineHeight: '1.6',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Auto Refresh Card
@@ -483,7 +482,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   autoRefreshBtnActive: {
     display: 'flex',
@@ -497,7 +496,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '700',
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   refreshBadge: {
     background: 'rgba(255,255,255,0.2)',
@@ -518,7 +517,7 @@ const styles = {
     fontWeight: '600',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   lastUpdatedValue: {
     fontSize: '12px',
@@ -538,7 +537,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '700',
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Time Remaining
@@ -561,7 +560,7 @@ const styles = {
     alignItems: 'center',
     gap: '10px',
     animation: 'slideIn 0.3s ease',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   toastInfo: {
     background: '#D23A01'
@@ -598,13 +597,13 @@ const styles = {
     fontWeight: '700',
     color: '#991b1b',
     marginBottom: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorMessage: {
     fontSize: '12px',
     color: '#7f1d1d',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorRetryBtn: {
     display: 'flex',
@@ -618,7 +617,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '12px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Loader
@@ -649,13 +648,13 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   loaderText: {
     fontSize: '14px',
     color: '#6b7280',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Content Sections
@@ -689,7 +688,7 @@ const styles = {
     alignItems: 'center',
     gap: '12px',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sectionIcon: {
     color: '#D23A01'
@@ -704,7 +703,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '600',
     color: '#10b981',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   leaderboardGrid: {
     display: 'flex',
@@ -742,14 +741,14 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyStateText: {
     fontSize: '14px',
     color: '#6b7280',
     marginBottom: '20px',
     lineHeight: '1.6',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // No Data Card

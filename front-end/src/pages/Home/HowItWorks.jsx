@@ -33,7 +33,6 @@ const HowItWorks = ({ data }) => {
       fontWeight: '700',
       color: '#1a1a1a',
       marginBottom: 'clamp(40px, 6vw, 60px)',
-      fontFamily: "'Poppins', sans-serif",
       letterSpacing: '-0.02em'
     },
     stepsGrid: {
@@ -67,7 +66,6 @@ const HowItWorks = ({ data }) => {
       color: '#D23A01',
       opacity: '0.15',
       marginBottom: '16px',
-      fontFamily: "'Poppins', sans-serif",
       position: 'absolute',
       top: '-20px',
       right: '20px'
@@ -77,13 +75,12 @@ const HowItWorks = ({ data }) => {
       fontWeight: '700',
       color: '#1a1a1a',
       marginBottom: '12px',
-      fontFamily: "'Poppins', sans-serif"
+      
     },
     stepDesc: {
       fontSize: 'clamp(13px, 2.5vw, 15px)',
       color: '#000000',
       lineHeight: '1.5',
-      fontFamily: "'Poppins', sans-serif",
       fontWeight: '500'
     },
     connector: {

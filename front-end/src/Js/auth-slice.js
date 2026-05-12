@@ -179,7 +179,7 @@ const authSlice = createSlice({
     const handleRejected = (state, action) => {
       state.isLoading = false;
       state.isAuthenticated = false;
-      state.error = action.payload; // ✅ This is the error message string
+      state.error = action.payload; 
       state.token = null;
       state.user = null;
     };

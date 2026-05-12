@@ -319,7 +319,7 @@ const styles = {
   alreadyVotedContainer: { display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 'calc(100vh - 10vh)', background: '#f8fafc', padding: 'clamp(20px, 5vw, 40px)', marginTop: '10vh' },
   alreadyVotedCard: { maxWidth: '500px', width: '100%', background: 'white', borderRadius: '24px', padding: 'clamp(32px, 6vw, 48px)', textAlign: 'center', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', border: '1px solid #e2e8f0' },
   alreadyVotedIcon: { marginBottom: '24px' },
-  alreadyVotedTitle: { fontSize: 'clamp(24px, 5vw, 28px)', fontWeight: '800', color: '#0f172a', marginBottom: '12px', fontFamily: "'Poppins', sans-serif" },
+  alreadyVotedTitle: { fontSize: 'clamp(24px, 5vw, 28px)', fontWeight: '800', color: '#0f172a', marginBottom: '12px',  },
   alreadyVotedMessage: { fontSize: 'clamp(14px, 3vw, 16px)', color: '#4b5563', marginBottom: '20px', lineHeight: '1.5' },
   alreadyVotedInfo: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '12px', background: '#f1f5f9', borderRadius: '12px', marginBottom: '28px', fontSize: '13px', color: '#475569', flexWrap: 'wrap' },
   alreadyVotedActions: { display: 'flex', gap: '16px', flexWrap: 'wrap' },

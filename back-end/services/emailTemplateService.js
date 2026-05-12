@@ -1,4 +1,4 @@
-
+const sendEmail=require('./sendEmail')
 
 // ---- Base Template ----
 const baseTemplate = (content) => `

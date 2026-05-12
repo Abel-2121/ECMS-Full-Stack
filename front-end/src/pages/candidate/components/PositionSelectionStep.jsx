@@ -57,7 +57,7 @@ const styles = {
     padding: 'clamp(20px, 4vw, 28px)', 
     marginBottom: '24px', 
     boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-    border: '1px solid #e5e7eb'
+    border: '1px solid #d6d6d6'
   },
   backNav: { 
     marginBottom: '24px' 
@@ -69,19 +69,19 @@ const styles = {
     background: 'none', 
     border: 'none', 
     cursor: 'pointer', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginBottom: '12px',
     fontSize: '14px',
     fontWeight: '500',
     padding: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionTitle: {
     fontSize: 'clamp(18px, 4vw, 20px)',
     fontWeight: '700',
     color: '#1a1a1a',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionsGrid: { 
     display: 'flex', 
@@ -108,7 +108,6 @@ const styles = {
     display: 'flex', 
     alignItems: 'center', 
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   secondaryBtn: { 
@@ -119,8 +118,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     transition: 'all 0.2s'
   }
 };

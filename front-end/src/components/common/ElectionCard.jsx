@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   FiClock, FiUsers, FiEye, FiShield, FiCheckCircle, 
   FiAlertCircle, FiUserPlus, FiFileText, FiBarChart2,
-  FiAward, FiCalendar
+  FiAward, FiCalendar, FiLock, FiXCircle
 } from 'react-icons/fi';
 import { formatLocalDate } from '../../utils/formatLocalDate';
 
@@ -19,12 +19,24 @@ const ElectionCard = ({
 
   const getStatusConfig = (status) => {
     const configs = {
+      // Draft
       draft: { label: 'DRAFT', bg: '#f1f5f9', color: '#475569', icon: <FiClock size={14} /> },
+      
+      // Registration
       registration_open: { label: 'REGISTRATION OPEN', bg: '#D23A0110', color: '#D23A01', icon: <FiUserPlus size={14} /> },
+      registration_closed: { label: 'REGISTRATION CLOSED', bg: '#fee2e2', color: '#dc2626', icon: <FiLock size={14} /> },
+      
+      // Nomination
       nomination_open: { label: 'NOMINATION OPEN', bg: '#02343010', color: '#023430', icon: <FiFileText size={14} /> },
+      nomination_closed: { label: 'NOMINATION CLOSED', bg: '#fee2e2', color: '#dc2626', icon: <FiXCircle size={14} /> },
+      
+      // Voting
       voting_open: { label: 'VOTING LIVE', bg: '#D23A0110', color: '#D23A01', icon: <FiShield size={14} /> },
-      results_published: { label: 'RESULTS', bg: '#02343010', color: '#023430', icon: <FiBarChart2 size={14} /> },
-      completed: { label: 'COMPLETED', bg: '#e5e7eb', color: '#4b5563', icon: <FiCheckCircle size={14} /> }
+      voting_closed: { label: 'VOTING CLOSED', bg: '#fef3c7', color: '#f59e0b', icon: <FiClock size={14} /> },
+      
+      // Results
+      results_published: { label: 'RESULTS PUBLISHED', bg: '#02343010', color: '#023430', icon: <FiBarChart2 size={14} /> },
+      completed: { label: 'COMPLETED', bg: '#dcfce7', color: '#166534', icon: <FiCheckCircle size={14} /> }
     };
     return configs[status] || configs.draft;
   };
@@ -43,6 +55,37 @@ const ElectionCard = ({
     return `${hours} hour${hours > 1 ? 's' : ''} remaining`;
   };
 
+  const getActionMessage = () => {
+    const status = election.status;
+    
+    // Registration closed
+    if (status === 'registration_closed') {
+      return 'Registration period has ended';
+    }
+    
+    // Nomination closed
+    if (status === 'nomination_closed') {
+      return 'Nomination period has ended';
+    }
+    
+    // Voting closed
+    if (status === 'voting_closed') {
+      return 'Voting has ended. Results coming soon.';
+    }
+    
+    // Results published
+    if (status === 'results_published') {
+      return 'Results are now available';
+    }
+    
+    // Completed
+    if (status === 'completed') {
+      return 'This election has been completed';
+    }
+    
+    return null;
+  };
+
   const status = getStatusConfig(election.status);
   const btnConfig = buttonConfig || {
     text: 'View Details',
@@ -52,16 +95,39 @@ const ElectionCard = ({
   };
 
   const getStatusMessage = () => {
+    // Closed status messages
+    if (election.status === 'registration_closed') {
+      return { text: 'Registration is closed', icon: <FiLock size={14} />, color: '#dc2626' };
+    }
+    if (election.status === 'nomination_closed') {
+      return { text: 'Nominations are closed', icon: <FiXCircle size={14} />, color: '#dc2626' };
+    }
+    if (election.status === 'voting_closed') {
+      return { text: 'Voting has ended', icon: <FiClock size={14} />, color: '#f59e0b' };
+    }
+    if (election.status === 'results_published') {
+      return { text: 'Results are now available', icon: <FiBarChart2 size={14} />, color: '#023430' };
+    }
+    if (election.status === 'completed') {
+      return { text: 'Election completed', icon: <FiCheckCircle size={14} />, color: '#166534' };
+    }
+    
+    // Registration status
     if (election.status === 'registration_open' && registrationStatus?.isRegistered) {
       return { text: 'You are registered. Check your email for credentials.', icon: <FiCheckCircle size={14} />, color: '#10b981' };
     }
+    
+    // Voting status
     if (election.status === 'voting_open' && !registrationStatus?.isRegistered) {
       return { text: 'Registration required before voting', icon: <FiAlertCircle size={14} />, color: '#f59e0b' };
     }
+    
+    // Nomination status
     if (election.status === 'nomination_open' && nominationStatus?.hasNomination) {
       const statusText = nominationStatus.status === 'pending' ? 'Pending Review' : nominationStatus.status.toUpperCase();
       return { text: `Nomination ${statusText}`, icon: <FiFileText size={14} />, color: '#f59e0b' };
     }
+    
     if (btnConfig.message) {
       return { text: btnConfig.message, icon: <FiAlertCircle size={14} />, color: '#64748b' };
     }
@@ -69,6 +135,27 @@ const ElectionCard = ({
   };
 
   const statusMessage = getStatusMessage();
+  const actionMessage = getActionMessage();
+
+  // Determine if action button should be disabled
+  const isActionDisabled = () => {
+    const closedStatuses = ['registration_closed', 'nomination_closed', 'voting_closed', 'completed'];
+    return btnConfig.disabled || closedStatuses.includes(election.status);
+  };
+
+  const getButtonText = () => {
+    if (election.status === 'results_published') return 'View Results';
+    if (election.status === 'voting_closed') return 'View Results';
+    if (election.status === 'completed') return 'View Results';
+    return btnConfig.text;
+  };
+
+  const getButtonColor = () => {
+    if (election.status === 'results_published') return '#023430';
+    if (election.status === 'voting_closed') return '#64748b';
+    if (election.status === 'completed') return '#166534';
+    return btnConfig.color;
+  };
 
   return (
     <div 
@@ -144,24 +231,25 @@ const ElectionCard = ({
           )}
         </div>
 
-        {statusMessage && (
-          <div style={{ ...styles.statusMessage, color: statusMessage.color }}>
-            {statusMessage.icon}
-            <span>{statusMessage.text}</span>
+       
+        {actionMessage && (
+          <div style={{ ...styles.actionMessage, color: '#21262c' }}>
+            <FiAlertCircle size={14} />
+            <span>{actionMessage}</span>
           </div>
         )}
 
         <button 
           style={{
             ...styles.actionBtn,
-            background: btnConfig.color,
-            opacity: btnConfig.disabled ? 0.6 : 1,
-            cursor: btnConfig.disabled ? 'not-allowed' : 'pointer'
+            background: getButtonColor(),
+            opacity: isActionDisabled() ? 0.6 : 1,
+            cursor: isActionDisabled() ? 'not-allowed' : 'pointer'
           }}
-          onClick={() => !btnConfig.disabled && onAction(election)}
-          disabled={btnConfig.disabled}
+          onClick={() => !isActionDisabled() && onAction(election)}
+          disabled={isActionDisabled()}
         >
-          {btnConfig.text}
+          {getButtonText()}
         </button>
       </div>
     </div>
@@ -212,7 +300,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#6b7280',
+    color: '#000000',
     transition: 'all 0.2s'
   },
   title: {
@@ -220,8 +308,7 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     margin: 0,
-    lineHeight: '1.4',
-    fontFamily: "'Poppins', sans-serif"
+    lineHeight: '1.4'
   },
   content: {
     padding: '0 24px 24px'
@@ -231,10 +318,9 @@ const styles = {
   },
   description: {
     fontSize: '14px',
-    color: '#4b5563',
+    color: '#000000',
     lineHeight: '1.6',
-    margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    margin: 0
   },
   lineClamp: {
     display: '-webkit-box',
@@ -250,8 +336,7 @@ const styles = {
     fontWeight: '700',
     padding: '4px 0',
     cursor: 'pointer',
-    marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    marginTop: '4px'
   },
   statsGrid: {
     display: 'grid',
@@ -268,16 +353,14 @@ const styles = {
   statVal: {
     fontSize: '24px',
     fontWeight: '800',
-    color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#1a1a1a'
   },
   statLab: {
     fontSize: '11px',
     fontWeight: '700',
-    color: '#6b7280',
+    color: '#09090a',
     textTransform: 'uppercase',
-    marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    marginTop: '4px'
   },
   timeline: {
     marginBottom: '16px',
@@ -303,13 +386,11 @@ const styles = {
   remainingText: {
     fontSize: '12px',
     fontWeight: '700',
-    color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#D23A01'
   },
   timeText: {
     fontSize: '13px',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000'
   },
   statusMessage: {
     fontSize: '12px',
@@ -319,8 +400,17 @@ const styles = {
     borderRadius: '10px',
     display: 'flex',
     alignItems: 'center',
-    gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    gap: '8px'
+  },
+  actionMessage: {
+    fontSize: '12px',
+    marginBottom: '14px',
+    padding: '10px 14px',
+    background: '#f1f5f9',
+    borderRadius: '10px',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px'
   },
   actionBtn: {
     width: '100%',
@@ -335,7 +425,6 @@ const styles = {
     justifyContent: 'center',
     gap: '8px',
     transition: 'background 0.2s',
-    fontFamily: "'Poppins', sans-serif",
     cursor: 'pointer'
   }
 };

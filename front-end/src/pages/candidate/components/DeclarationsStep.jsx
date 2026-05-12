@@ -149,12 +149,12 @@ const styles = {
     color: '#1a1a1a',
     marginTop: '12px',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   description: {
     fontSize: '14px',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#010202',
+    
   },
   declarationsList: {
     display: 'flex',
@@ -189,14 +189,14 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   declarationDescription: {
     fontSize: '13px',
-    color: '#6b7280',
+    color: '#000000',
     lineHeight: '1.5',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   noticeBox: {
     display: 'flex',
@@ -214,14 +214,14 @@ const styles = {
     fontSize: '13px',
     fontWeight: '700',
     color: '#92400e',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   noticeText: {
     fontSize: '12px',
     color: '#92400e',
     marginTop: '4px',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   actionButtons: {
     display: 'flex',
@@ -241,8 +241,8 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#060708',
+    
     transition: 'all 0.2s'
   },
   continueBtn: {
@@ -259,7 +259,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     color: 'white',
-    fontFamily: "'Poppins', sans-serif",
+  
     transition: 'all 0.2s'
   }
 };

@@ -345,7 +345,7 @@ const styles = {
   photoPlaceholderText: {
     fontWeight: '800',
     color: '#ffffff',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   rankBadge: {
     position: 'absolute',
@@ -356,7 +356,7 @@ const styles = {
     borderRadius: '40px',
     fontWeight: '700',
     backdropFilter: 'blur(10px)',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   infoSection: {
     flex: 1,
@@ -377,14 +377,14 @@ const styles = {
     background: '#FEF3F0',
     borderRadius: '20px',
     width: 'fit-content',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   candidateName: {
     fontWeight: '800',
     color: '#1a1a1a',
     margin: 0,
     lineHeight: '1.2',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   crownBadge: {
     borderRadius: '50%',
@@ -402,7 +402,7 @@ const styles = {
     color: '#023430',
     background: '#e8f5e9',
     borderRadius: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statsRow: {
     display: 'flex',
@@ -421,14 +421,14 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '2px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statLabel: {
     fontWeight: '600',
     color: '#6b7280',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sloganSection: {
     display: 'flex',
@@ -445,7 +445,7 @@ const styles = {
     fontWeight: '600',
     color: '#D23A01',
     fontStyle: 'italic',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sectionTitle: {
     display: 'flex',
@@ -453,12 +453,12 @@ const styles = {
     gap: '6px',
     fontWeight: '700',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   bioText: {
     color: '#4b5563',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   manifestoBox: {
     background: '#f8fafc',
@@ -468,7 +468,7 @@ const styles = {
   manifestoText: {
     color: '#1a1a1a',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

@@ -36,12 +36,11 @@ const styles = {
     fontSize: '16px', 
     fontWeight: '600', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     marginTop: '8px'
   },
   loaderSubtext: {
     fontSize: '13px',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   }
 };

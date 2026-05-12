@@ -19,7 +19,7 @@ voteRoute.post(
 );
 
 
-voteRoute.post('/verify-confirmation', voteController.verifyVote);
+voteRoute.post('/verify-confirmation',authMiddleware.protect, voteController.verifyVote);
 
 
 voteRoute.get('/election/:electionId/voting-data', voteController.getVotingData);

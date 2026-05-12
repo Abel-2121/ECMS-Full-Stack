@@ -583,16 +583,24 @@ const voteController = {
       return next(new AppError('Confirmation code is required', 400));
     }
     
-    const vote = await Vote.findOne({ confirmationCode })
-      .populate('electionId', 'title')
-      .lean();
+    const userId = req.user?.id;
+    
+    if (!userId) {
+      return next(new AppError('You must be logged in to verify a vote', 401));
+    }
+    
+    const vote = await Vote.findOne({ 
+      confirmationCode,
+      userId: userId  
+    }).populate('electionId', 'title').lean();
     
     if (!vote) {
-      return res.status(200).json({
+      return res.status(404).json({
         success: false,
-        message: 'Invalid confirmation code'
+        message: 'Invalid confirmation code or this vote does not belong to you'
       });
     }
+    
     
     res.status(200).json({
       success: true,

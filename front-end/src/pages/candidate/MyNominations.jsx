@@ -382,7 +382,7 @@ const styles = {
   },
   subtitle: { 
     fontSize: 'clamp(14px, 3vw, 16px)', 
-    color: '#4b5563'
+    color: '#000000'
   },
   
   statsGrid: {
@@ -416,7 +416,7 @@ const styles = {
   },
   statLabel: { 
     fontSize: '12px', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginTop: '4px',
     fontWeight: '500'
   },
@@ -476,7 +476,7 @@ const styles = {
   },
   selectedElectionLabel: { 
     fontWeight: '600', 
-    color: '#6b7280'
+    color: '#000000'
   },
   selectedElectionValue: { 
     fontWeight: '700', 
@@ -549,7 +549,8 @@ const styles = {
     padding: 'clamp(20px, 4vw, 24px)',
     display: 'flex',
     gap: '16px',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop:'4vh'
   },
   
   candidateAvatar: {
@@ -600,7 +601,7 @@ const styles = {
     flexDirection: 'column',
     gap: '6px',
     fontSize: '12px',
-    color: '#6b7280'
+    color: '#040507'
   },
   
   cardFooter: {
@@ -618,7 +619,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '13px',
     fontWeight: '700',
-    color: '#4b5563',
+    color: '#080a0c',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -639,7 +640,7 @@ const styles = {
   },
   emptyText: {
     fontSize: '14px',
-    color: '#6b7280'
+    color: '#090a0e'
   },
   submitBtn: { 
     marginTop: '20px', 
@@ -666,7 +667,7 @@ const styles = {
   },
   loaderText: {
     fontSize: '15px',
-    color: '#6b7280'
+    color: '#000000'
   },
   spinner: { 
     width: '50px', 

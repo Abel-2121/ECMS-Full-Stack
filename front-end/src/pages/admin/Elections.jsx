@@ -362,12 +362,12 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: { 
     color: '#4a5568', 
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   createBtn: { 
     display: 'flex', 
@@ -381,7 +381,7 @@ const styles = {
     fontWeight: '600', 
     fontSize: '15px',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   
@@ -411,7 +411,7 @@ const styles = {
     border: '1px solid #e5e7eb', 
     borderRadius: '10px', 
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif",
+
     outline: 'none'
   },
   filterGroup: { 
@@ -428,7 +428,6 @@ const styles = {
     borderRadius: '10px', 
     fontSize: '15px', 
     background: '#fff',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a',
     cursor: 'pointer'
   },
@@ -443,7 +442,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   
@@ -464,13 +463,12 @@ const styles = {
     fontSize: 'clamp(26px, 5vw, 32px)', 
     fontWeight: '700', 
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statLabel: { 
     fontSize: '14px', 
     color: '#4a5568', 
     marginTop: '6px',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   
@@ -497,7 +495,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     textTransform: 'uppercase',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tableRow: { 
     borderBottom: '1px solid #f1f5f9', 
@@ -508,7 +506,6 @@ const styles = {
     padding: '16px', 
     fontSize: '15px', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     verticalAlign: 'middle'
   },
   
@@ -580,7 +577,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   resultBtn: {
     display: 'flex', 
@@ -594,7 +591,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   deleteBtn: { 
     padding: '8px 12px', 
@@ -612,14 +609,13 @@ const styles = {
     textAlign: 'center', 
     padding: '60px', 
     color: '#4a5568',
-    fontFamily: "'Poppins', sans-serif",
     fontSize: '16px'
   },
   emptyState: { 
     textAlign: 'center', 
     padding: '60px', 
     color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyIcon: { 
     fontSize: '48px', 
@@ -635,7 +631,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '15px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   modalOverlay: { 
@@ -662,7 +658,6 @@ const styles = {
     fontSize: '22px', 
     fontWeight: '700', 
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a'
   },
   modalWarning: { 
@@ -687,7 +682,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   confirmDeleteBtn: { 
     padding: '10px 20px', 
@@ -698,7 +693,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

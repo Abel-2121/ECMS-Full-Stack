@@ -161,7 +161,7 @@ function Header() {
     transition: 'all 0.2s ease'
   };
 
-  // ✅ Desktop avatar circle with photo support
+
   const avatarCircleStyle = {
     width: 'clamp(32px, 6vw, 36px)',
     height: 'clamp(32px, 6vw, 36px)',
@@ -223,7 +223,6 @@ function Header() {
     textAlign: 'left'
   };
 
-  // ✅ Mobile menu user section styles with photo support
   const mobileUserSectionStyle = {
     padding: '16px',
     borderBottom: '1px solid #E5E7EB',
@@ -237,7 +236,6 @@ function Header() {
     gap: '12px'
   };
 
-  // ✅ Mobile avatar with photo support
   const mobileUserAvatarStyle = {
     width: '48px',
     height: '48px',
@@ -297,7 +295,6 @@ function Header() {
     gap: '8px'
   };
 
-  // ✅ Render avatar content (image or initials)
   const renderAvatarContent = (size = 'desktop') => {
     if (profilePicture) {
       return (
@@ -372,13 +369,12 @@ function Header() {
 
       <nav style={navbarStyle}>
         <div style={navStyles.navContainer}>
-          {/* Logo - LEFT with Icon */}
+       
           <NavLink to="/" style={navStyles.logo} end>
             <FaVoteYea style={navStyles.logoIcon} />
             ECMS
           </NavLink>
 
-          {/* Nav Items - CENTER - Using react-scroll */}
           <div style={navStyles.desktopMenu} className="desktop-menu">
             <ScrollLink
               to="hero"
@@ -418,11 +414,9 @@ function Header() {
             </ScrollLink>
           </div>
 
-          {/* User Profile & Logout - RIGHT */}
           <div style={navStyles.rightSection}>
             {isAuthenticated ? (
               <>
-                {/* Dashboard Link for Authenticated Users */}
                 <NavLink 
                   to={getDashboardPath()} 
                   style={({ isActive }) => ({
@@ -435,7 +429,6 @@ function Header() {
                   {getDashboardLabel()}
                 </NavLink>
                 
-                {/* Desktop Avatar - hidden on mobile */}
                 <div style={{ position: 'relative' }} className="desktop-avatar" ref={userMenuRef}>
                   <button
                     style={userAvatarStyle}
@@ -480,10 +473,8 @@ function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu - WITH USER AVATAR SECTION */}
         {mobileMenuOpen && (
           <div style={navStyles.mobileMenu}>
-            {/* ✅ USER AVATAR SECTION AT TOP OF MOBILE MENU with photo support */}
             {isAuthenticated && (
               <div style={mobileUserSectionStyle}>
                 <div style={mobileUserInfoStyle}>
@@ -561,7 +552,6 @@ function Header() {
                   {getDashboardLabel()}
                 </NavLink>
                 
-                {/* Profile button with icon */}
                 <button
                   onClick={goToProfile}
                   style={mobileProfileBtnStyle}

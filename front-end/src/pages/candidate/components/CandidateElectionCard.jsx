@@ -202,7 +202,7 @@ const styles = {
     alignItems: 'center',
     gap: '6px',
     letterSpacing: '0.02em',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   secureBadge: {
     background: '#dbeafe',
@@ -214,7 +214,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   viewIconBtn: {
     background: 'transparent',
@@ -234,7 +234,7 @@ const styles = {
     color: '#1a1a1a',
     margin: 0,
     lineHeight: '1.4',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   content: {
     padding: '0 clamp(20px, 4vw, 24px) 24px'
@@ -244,10 +244,10 @@ const styles = {
   },
   description: {
     fontSize: '14px',
-    color: '#4b5563',
+    color: '#000000',
     lineHeight: '1.6',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   lineClamp: {
     display: '-webkit-box',
@@ -264,7 +264,7 @@ const styles = {
     padding: '4px 0',
     cursor: 'pointer',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statsGrid: {
     display: 'grid',
@@ -282,15 +282,15 @@ const styles = {
     fontSize: '24px',
     fontWeight: '800',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statLab: {
     fontSize: '11px',
     fontWeight: '700',
-    color: '#6b7280',
+    color: '#000000',
     textTransform: 'uppercase',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   timeline: {
     marginBottom: '20px',
@@ -316,12 +316,12 @@ const styles = {
   remainingText: {
     fontSize: '12px',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   timeText: {
     fontSize: '13px',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   statusMessage: {
     fontSize: '12px',
@@ -333,7 +333,7 @@ const styles = {
     alignItems: 'center',
     gap: '8px',
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   selectBtn: {
     width: '100%',
@@ -348,7 +348,6 @@ const styles = {
     justifyContent: 'center',
     gap: '8px',
     transition: 'background 0.2s',
-    fontFamily: "'Poppins', sans-serif",
     cursor: 'pointer'
   }
 };

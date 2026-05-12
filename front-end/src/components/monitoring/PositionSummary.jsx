@@ -113,7 +113,7 @@ const PositionSummary = ({ voteCounts }) => {
 const styles = {
   container: {
     marginTop: '32px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   title: {
     fontSize: '22px',

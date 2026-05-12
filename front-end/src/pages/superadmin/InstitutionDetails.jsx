@@ -395,7 +395,7 @@ const styles = {
     fontSize: '16px',
     color: '#000000',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: {
     width: '56px',
@@ -416,7 +416,7 @@ const styles = {
     color: '#000000',
     marginTop: '16px',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   backBtn: {
     display: 'inline-flex',
@@ -431,7 +431,7 @@ const styles = {
     fontWeight: '600',
     color: '#000000',
     marginTop: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   toast: {
     position: 'fixed',
@@ -444,7 +444,7 @@ const styles = {
     fontWeight: '500',
     zIndex: 1000,
     boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   toastText: {
     fontSize: '14px',
@@ -467,7 +467,6 @@ const styles = {
     border: '1px solid #e5e7eb',
     borderRadius: '12px',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     fontSize: '14px',
     fontWeight: '600',
     color: '#000000'
@@ -488,7 +487,7 @@ const styles = {
     cursor: 'pointer',
     fontWeight: '700',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   deleteButton: {
     display: 'flex',
@@ -502,7 +501,7 @@ const styles = {
     cursor: 'pointer',
     fontWeight: '700',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   instCard: {
     backgroundColor: 'white',
@@ -535,7 +534,7 @@ const styles = {
     fontWeight: '800',
     color: '#000000',
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   instBadges: {
     display: 'flex',
@@ -547,7 +546,7 @@ const styles = {
     borderRadius: '24px',
     fontSize: '13px',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   instDetails: {
     display: 'grid',
@@ -566,10 +565,10 @@ const styles = {
     fontSize: '15px',
     color: '#000000',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   detailIcon: {
-    color: '#9ca3af'
+    color: '#111111'
   },
   aboutSection: {
     paddingTop: '20px',
@@ -580,13 +579,13 @@ const styles = {
     fontWeight: '700',
     color: '#000000',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   aboutText: {
     fontSize: '15px',
-    color: '#4b5563',
+    color: '#010202',
     lineHeight: '1.6',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statsGrid: {
     display: 'grid',
@@ -607,13 +606,13 @@ const styles = {
     fontWeight: '800',
     color: '#000000',
     margin: '10px 0 6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statLabel: {
     fontSize: '14px',
-    color: '#4b5563',
+    color: '#000000',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tabsContainer: {
     backgroundColor: 'white',
@@ -640,7 +639,7 @@ const styles = {
     fontWeight: '700',
     cursor: 'pointer',
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tabInactive: {
     display: 'flex',
@@ -649,11 +648,11 @@ const styles = {
     padding: '14px 28px',
     backgroundColor: 'none',
     border: 'none',
-    color: '#6b7280',
+    color: '#000000',
     cursor: 'pointer',
     fontSize: '15px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tabContent: {
     padding: 'clamp(20px, 4vw, 28px)'
@@ -661,7 +660,7 @@ const styles = {
   emptyState: {
     textAlign: 'center',
     padding: '60px',
-    color: '#9ca3af',
+    color: '#000000',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -669,9 +668,9 @@ const styles = {
   },
   emptyText: {
     fontSize: '16px',
-    color: '#6b7280',
+    color: '#000000',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionsTableWrapper: {
     overflowX: 'auto'
@@ -691,7 +690,7 @@ const styles = {
     fontSize: '15px',
     fontWeight: '700',
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   tableRow: {
     borderBottom: '1px solid #e5e7eb'
@@ -700,7 +699,7 @@ const styles = {
     padding: '14px 16px',
     fontSize: '14px',
     color: '#000000',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionTitle: {
     fontWeight: '600',
@@ -726,7 +725,7 @@ const styles = {
     fontSize: '13px',
     color: '#D23A01',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   adminsHeader: {
     display: 'flex',
@@ -741,7 +740,7 @@ const styles = {
     fontWeight: '800',
     color: '#000000',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   manageAdminsBtn: {
     display: 'flex',
@@ -755,7 +754,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   addFirstAdminBtn: {
     marginTop: '20px',
@@ -770,7 +769,7 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   adminsGrid: {
     display: 'grid',
@@ -801,7 +800,7 @@ const styles = {
     justifyContent: 'center',
     fontSize: '28px',
     fontWeight: '800',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   adminInfo: {
     flex: 1
@@ -811,7 +810,7 @@ const styles = {
     fontWeight: '800',
     color: '#000000',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   adminDetail: {
     display: 'flex',
@@ -821,7 +820,7 @@ const styles = {
     color: '#000000',
     marginBottom: '6px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

@@ -7,7 +7,7 @@ const Result = require('../model/Result');
 const catchAsync = require('../utils/catchAsync');
 const VoterEligibilityLists = require('../model/VoterEligibilityLists');
 const AppError = require('../utils/appError');
-const { blockedStatus2 } = require('../utils/electionStatus');
+const { blockedStatus2 ,blockedStatus3} = require('../utils/electionStatus');
 const { getPublicUrl } = require('../middleware/upload');
 
 function shuffleArray(array) {

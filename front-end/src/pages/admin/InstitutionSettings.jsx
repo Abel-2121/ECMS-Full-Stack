@@ -430,7 +430,7 @@ const styles = {
     color: '#6b7280', 
     fontSize: '14px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   title: { 
     fontSize: 'clamp(24px, 5vw, 28px)', 
@@ -440,7 +440,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   titleIcon: {
     color: '#D23A01'
@@ -448,7 +448,7 @@ const styles = {
   subtitle: { 
     fontSize: 'clamp(13px, 3vw, 14px)', 
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerActions: { 
     display: 'flex', 
@@ -466,7 +466,6 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '700',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   toast: { 
@@ -483,7 +482,7 @@ const styles = {
     fontWeight: '500',
     zIndex: 1000, 
     boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   form: { 
     background: 'white', 
@@ -501,7 +500,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   formGrid: { 
     display: 'grid', 
@@ -519,7 +518,7 @@ const styles = {
     marginBottom: '8px', 
     color: '#1a1a1a',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   required: {
     color: '#D23A01',
@@ -531,7 +530,6 @@ const styles = {
     border: '2px solid #e5e7eb', 
     borderRadius: '12px', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s'
   },
@@ -541,7 +539,6 @@ const styles = {
     border: '2px solid #e5e7eb', 
     borderRadius: '12px', 
     fontSize: '14px', 
-    fontFamily: "'Poppins', sans-serif",
     resize: 'vertical', 
     outline: 'none'
   },
@@ -550,7 +547,7 @@ const styles = {
     color: '#9ca3af', 
     marginTop: '6px',
     display: 'block',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   logoUpload: { 
     marginTop: '8px' 
@@ -577,7 +574,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '12px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadArea: { 
     display: 'flex', 
@@ -597,13 +594,13 @@ const styles = {
     fontWeight: '500',
     color: '#4b5563',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadHint: { 
     fontSize: '11px', 
     color: '#9ca3af', 
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   fileInput: { 
     position: 'absolute', 
@@ -629,7 +626,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   cardIcon: {
     color: '#D23A01'
@@ -648,7 +645,7 @@ const styles = {
     fontSize: '13px',
     flexWrap: 'wrap',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   statusLabel: {
     fontWeight: '600',
@@ -662,7 +659,7 @@ const styles = {
     borderRadius: '20px', 
     fontSize: '12px', 
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   loaderContainer: { 
     display: 'flex', 
@@ -675,7 +672,7 @@ const styles = {
   loaderText: {
     fontSize: '15px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: { 
     width: '50px', 

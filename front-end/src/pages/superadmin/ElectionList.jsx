@@ -289,7 +289,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   titleIcon: {
     color: '#D23A01'
@@ -297,7 +297,7 @@ const styles = {
   subtitle: {
     fontSize: 'clamp(14px, 3vw, 16px)',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerStats: {
     display: 'flex',
@@ -315,7 +315,7 @@ const styles = {
     fontWeight: '500',
     color: '#1a1a1a',
     border: '1px solid #e5e7eb',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   filterBar: {
     display: 'flex',
@@ -344,7 +344,6 @@ const styles = {
     border: '1px solid #e5e7eb',
     borderRadius: '12px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s',
     background: 'white'
@@ -373,7 +372,6 @@ const styles = {
     minWidth: '160px',
     appearance: 'none',
     paddingRight: '24px',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a'
   },
   selectIcon: {
@@ -393,7 +391,7 @@ const styles = {
   resultsCount: {
     fontSize: '13px',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   clearSearch: {
     background: 'none',
@@ -402,7 +400,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '600',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionsGrid: {
     display: 'grid',
@@ -420,7 +418,7 @@ const styles = {
   loaderText: {
     fontSize: '15px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: {
     width: '50px',
@@ -446,12 +444,12 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyText: {
     fontSize: '14px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   resetBtn: {
     marginTop: '20px',
@@ -463,7 +461,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

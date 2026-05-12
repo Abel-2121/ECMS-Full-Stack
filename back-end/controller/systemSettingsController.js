@@ -82,7 +82,7 @@ const systemSettingsController ={
       footer: footer
     };
     
-    console.log('Public Settings:', JSON.stringify(publicSettings, null, 2));
+   
     
     res.status(200).json({
       status: 'success',

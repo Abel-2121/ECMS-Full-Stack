@@ -935,7 +935,7 @@ const styles = {
   },
   subtitle: { 
     fontSize: '14px', 
-    color: '#64748b' 
+    color: '#090a0c' 
   },
   headerActions: { 
     display: 'flex', 
@@ -964,7 +964,7 @@ const styles = {
     borderRadius: '8px', 
     cursor: 'pointer', 
     fontWeight: '500', 
-    color: '#475569',
+    color: '#000000',
     transition: 'all 0.2s'
   },
   content: { 
@@ -1001,7 +1001,7 @@ const styles = {
     display: 'block', 
     fontWeight: '500', 
     marginBottom: '8px', 
-    color: '#1e293b',
+    color: '#030305',
     fontSize: '13px'
   },
   input: { 
@@ -1042,7 +1042,7 @@ const styles = {
   },
   helperText: {
     fontSize: '12px',
-    color: '#64748b',
+    color: '#000000',
     marginBottom: '16px'
   },
   featuresList: {
@@ -1070,7 +1070,7 @@ const styles = {
     '& p': {
       margin: 0,
       fontSize: '13px',
-      color: '#475569'
+      color: '#000000'
     }
   },
   featureActions: {
@@ -1145,7 +1145,7 @@ const styles = {
     padding: '40px',
     background: '#f8fafc',
     borderRadius: '10px',
-    color: '#94a3b8'
+    color: '#000000'
   },
   imageCard: {
     display: 'flex',
@@ -1167,7 +1167,7 @@ const styles = {
   },
   imageName: {
     fontSize: '12px',
-    color: '#475569',
+    color: '#000000',
     marginBottom: '4px'
   },
   activeBadge: {
@@ -1215,7 +1215,7 @@ const styles = {
     '& p': {
       margin: '0 0 4px 0',
       fontSize: '13px',
-      color: '#475569'
+      color: '#000000'
     }
   },
   stepActions: {
@@ -1252,7 +1252,7 @@ const styles = {
     padding: '12px',
     background: '#f8fafc',
     borderRadius: '10px',
-    border: '1px solid #e2e8f0'
+    border: '1px solid #212122'
   },
   addBtn: {
     display: 'flex',

@@ -95,7 +95,6 @@ const ManageCandidates = () => {
     }
   };
 
-  // ✅ Close all modals
   const closeAllModals = () => {
     setShowDetailModal(false);
     setShowEditModal(false);
@@ -160,7 +159,6 @@ const ManageCandidates = () => {
     }
   }, [electionId, selectedElection]);
 
-  // ✅ Show error modal when error occurs - and close all modals
   useEffect(() => {
     if (error) {
       closeAllModals();
@@ -378,7 +376,6 @@ const ManageCandidates = () => {
         </div>
       )}
 
-      {/* ✅ Error Modal */}
       <ErrorModal 
         isOpen={errorModal.isOpen}
         message={errorModal.message}

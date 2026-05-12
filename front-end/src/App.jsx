@@ -113,7 +113,7 @@ const App = () => {
           </Route>
         </Route>
 
-        {/* ==================== ELECTION ADMIN ROUTES ==================== */}
+
         <Route element={<ProtectedRoute allowedRoles={['electionAdmin']} />}>
           <Route path='/electionAdmin' element={<ElectionAdminLayout />}>
             <Route index element={<AdminDashboard />} />

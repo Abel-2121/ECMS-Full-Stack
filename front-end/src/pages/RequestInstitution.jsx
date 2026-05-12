@@ -450,13 +450,11 @@ const styles = {
     fontWeight: '800',
     color: '#D23A01',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif",
     letterSpacing: '-0.5px'
   },
   subtitle: {
     fontSize: 'clamp(13px, 3vw, 16px)',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#101113',
     lineHeight: '1.5'
   },
   errorBanner: {
@@ -470,7 +468,6 @@ const styles = {
     gap: '10px',
     color: '#dc2626',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     flexWrap: 'wrap'
   },
   form: {
@@ -490,7 +487,7 @@ const styles = {
     fontSize: 'clamp(13px, 3vw, 14px)',
     fontWeight: '700',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   labelIcon: {
     color: '#D23A01',
@@ -506,7 +503,6 @@ const styles = {
     border: '2px solid #e5e7eb',
     borderRadius: '12px',
     fontSize: 'clamp(14px, 3vw, 15px)',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s ease',
     backgroundColor: '#fff',
@@ -522,7 +518,6 @@ const styles = {
     border: '2px solid #e5e7eb',
     borderRadius: '12px',
     fontSize: 'clamp(14px, 3vw, 15px)',
-    fontFamily: "'Poppins', sans-serif",
     resize: 'vertical',
     outline: 'none',
     transition: 'all 0.2s ease',
@@ -533,7 +528,6 @@ const styles = {
   fieldError: {
     fontSize: 'clamp(11px, 2.5vw, 12px)',
     color: '#dc2626',
-    fontFamily: "'Poppins', sans-serif",
     marginTop: '4px',
     display: 'block'
   },
@@ -559,9 +553,8 @@ const styles = {
   },
   infoText: {
     fontSize: 'clamp(12px, 2.5vw, 13px)',
-    color: '#4b5563',
+    color: '#0e1013',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif",
     flex: 1
   },
   button: {
@@ -577,7 +570,6 @@ const styles = {
     fontSize: 'clamp(14px, 3vw, 15px)',
     fontWeight: '700',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s ease',
     marginTop: '8px',
     width: '100%'
@@ -618,19 +610,17 @@ const styles = {
     fontWeight: '800',
     color: '#10b981',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   successMessage: {
     fontSize: 'clamp(14px, 3vw, 16px)',
-    color: '#4b5563',
+    color: '#121418',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif",
     lineHeight: '1.5'
   },
   successNote: {
     fontSize: 'clamp(12px, 2.5vw, 13px)',
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#090a0a',
     lineHeight: '1.5'
   }
 };

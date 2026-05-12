@@ -319,13 +319,13 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif",
+    
     letterSpacing: '-0.3px'
   },
   description: { 
-    color: '#4b5563', 
+    color: '#0a0c0e', 
     fontSize: 'clamp(13px, 3vw, 14px)',
-    fontFamily: "'Poppins', sans-serif",
+    
     lineHeight: '1.5'
   },
   headerActions: { 
@@ -346,7 +346,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '600',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   primaryBtn: { 
@@ -361,7 +361,7 @@ const styles = {
     fontWeight: '700', 
     fontSize: '13px',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   pendingBtn: { 
@@ -373,7 +373,7 @@ const styles = {
     fontWeight: '700', 
     fontSize: '13px',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   refreshBtn: { 
@@ -381,14 +381,13 @@ const styles = {
     alignItems: 'center',
     gap: '8px',
     background: '#f1f5f9', 
-    color: '#334155', 
+    color: '#000000', 
     border: 'none', 
     padding: '8px 16px', 
     borderRadius: '10px', 
     fontWeight: '600', 
     fontSize: '13px',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   errorBanner: { 
@@ -402,7 +401,7 @@ const styles = {
     gap: '10px',
     fontSize: '13px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   closeBtn: { 
     background: 'none', 
@@ -429,7 +428,7 @@ const styles = {
     left: '12px', 
     top: '50%', 
     transform: 'translateY(-50%)', 
-    color: '#9ca3af'
+    color: '#000000'
   },
   searchInput: { 
     width: '100%', 
@@ -437,7 +436,6 @@ const styles = {
     border: '1px solid #e5e7eb', 
     borderRadius: '10px', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s'
   },
@@ -452,7 +450,6 @@ const styles = {
     borderRadius: '10px', 
     fontSize: '14px', 
     background: 'white',
-    fontFamily: "'Poppins', sans-serif",
     color: '#1a1a1a',
     cursor: 'pointer',
     outline: 'none'
@@ -476,13 +473,11 @@ const styles = {
     fontSize: 'clamp(24px, 5vw, 28px)', 
     fontWeight: '800', 
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif",
     marginBottom: '4px'
   },
   statLabel: { 
     fontSize: '13px', 
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#08090a',
     fontWeight: '600'
   }
 };

@@ -486,7 +486,7 @@ const styles = {
     fontSize: '15px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   headerActions: { 
     display: 'flex', 
@@ -504,7 +504,7 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '600',
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   deleteBtn: { 
     display: 'flex', 
@@ -518,7 +518,7 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '600',
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   mainCard: { 
@@ -542,7 +542,7 @@ const styles = {
     fontWeight: '700', 
     color: '#1a1a1a', 
     margin: '0 0 10px 0',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   idBadge: { 
     display: 'flex', 
@@ -701,7 +701,6 @@ const styles = {
     fontWeight: '700', 
     marginBottom: '20px', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     display: 'flex',
     alignItems: 'center'
   },
@@ -742,7 +741,7 @@ const styles = {
     fontSize: '15px', 
     fontWeight: '600', 
     color: '#4a5568',
-    fontFamily: "'Poppins', sans-serif",
+  
     transition: 'all 0.2s'
   },
   tabActive: { 
@@ -783,7 +782,7 @@ const styles = {
     fontWeight: '700', 
     marginBottom: '16px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   modalWarning: { 
     fontSize: '14px', 
@@ -807,7 +806,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   confirmDeleteBtn: { 
     padding: '10px 20px', 
@@ -818,14 +817,13 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   loader: { 
     textAlign: 'center', 
     padding: '60px', 
     color: '#4a5568',
-    fontFamily: "'Poppins', sans-serif",
     fontSize: '16px'
   },
   loaderSmall: { 

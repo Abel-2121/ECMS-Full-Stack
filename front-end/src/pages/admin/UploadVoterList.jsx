@@ -35,11 +35,9 @@ const UploadVoterList = () => {
   }, [dispatch]);
 
   const validateFile = (file) => {
-    // Use securityValidators for voter list file validation
     const fileError = securityValidators.isValidVoterListFile(file);
     if (fileError) return fileError;
-    
-    // Additional validation for file extension
+  
     const validExtensions = ['.csv', '.xlsx', '.xls'];
     const fileExt = '.' + file.name.split('.').pop().toLowerCase();
     
@@ -162,8 +160,8 @@ const UploadVoterList = () => {
             </div>
           </div>
           <div style={styles.successActions}>
-            <button style={styles.secondaryBtn} onClick={handleReset}>
-              Upload Another
+            <button style={styles.secondaryBtn} onClick={()=>navigate('/electionAdmin/dashboard')}>
+             Dashboard
             </button>
             <button style={styles.primaryBtn} onClick={() => navigate('/electionAdmin/elections')}>
               Election <FiArrowRight size={16} />
@@ -367,7 +365,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    
     transition: 'all 0.2s'
   },
   header: { 
@@ -378,12 +376,12 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: {
     fontSize: 'clamp(14px, 3vw, 16px)',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorBanner: { 
     background: '#fee2e2', 
@@ -395,7 +393,7 @@ const styles = {
     alignItems: 'center', 
     gap: '10px',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   mainContent: { 
     display: 'flex', 
@@ -423,7 +421,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   select: { 
     width: '100%', 
@@ -431,7 +429,6 @@ const styles = {
     border: '2px solid #e5e7eb', 
     borderRadius: '12px', 
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none',
     transition: 'all 0.2s'
   },
@@ -445,7 +442,7 @@ const styles = {
     borderRadius: '10px',
     fontSize: '13px',
     color: '#166534',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadArea: { 
     border: '2px dashed #cbd5e1', 
@@ -467,13 +464,13 @@ const styles = {
     fontSize: '14px',
     color: '#6b7280',
     marginTop: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadOr: {
     fontSize: '12px',
     color: '#9ca3af',
     margin: '8px 0',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadButton: { 
     display: 'inline-block', 
@@ -484,14 +481,13 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   uploadHint: {
     fontSize: '11px',
     color: '#9ca3af',
     marginTop: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   templateBtn: { 
     display: 'flex', 
@@ -506,7 +502,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   guideSection: { 
     background: '#f8fafc', 
@@ -519,20 +515,20 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   guideList: {
     paddingLeft: '20px',
     margin: '8px 0',
     color: '#4b5563',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   guideNote: {
     fontSize: '12px',
     color: '#9ca3af',
     marginTop: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   previewContainer: { 
     background: 'white', 
@@ -549,7 +545,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   fileInfo: { 
     background: '#f8fafc', 
@@ -574,7 +570,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   confirmBtn: { 
     padding: '10px 24px', 
@@ -585,7 +581,6 @@ const styles = {
     cursor: 'pointer',
     fontSize: '13px',
     fontWeight: '700',
-    fontFamily: "'Poppins', sans-serif",
     display: 'flex',
     alignItems: 'center',
     gap: '8px'
@@ -595,7 +590,7 @@ const styles = {
     justifyContent: 'center', 
     alignItems: 'center', 
     minHeight: '70vh',
-    marginTop:"5vh", 
+    marginTop:"10vh", 
   },
   successCard: { 
     background: 'white', 
@@ -615,7 +610,7 @@ const styles = {
     fontWeight: '800',
     color: '#10b981',
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   summaryGrid: { 
     display: 'grid', 
@@ -651,7 +646,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   secondaryBtn: { 
     padding: '12px 24px', 
@@ -662,7 +657,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   spinner: {
     animation: 'spin 1s linear infinite'

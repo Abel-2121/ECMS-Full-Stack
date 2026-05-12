@@ -191,12 +191,12 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: {
     fontSize: '14px',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   formGroup: {
     padding: '24px'
@@ -207,7 +207,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   inputWrapper: {
     position: 'relative'
@@ -227,13 +227,13 @@ const styles = {
     fontSize: '15px',
     outline: 'none',
     transition: 'border-color 0.2s',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   hint: {
     fontSize: '12px',
     color: '#9ca3af',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorBox: {
     margin: '0 24px 20px 24px',
@@ -245,7 +245,7 @@ const styles = {
     gap: '10px',
     color: '#dc2626',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   actions: {
     display: 'flex',
@@ -264,7 +264,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   registerBtn: {
     flex: 1,
@@ -280,7 +280,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   successContainer: {
     padding: '32px 24px',
@@ -302,13 +302,13 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   successMessage: {
     fontSize: '14px',
     color: '#4b5563',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emailInfo: {
     display: 'flex',
@@ -320,7 +320,7 @@ const styles = {
     borderRadius: '10px',
     marginBottom: '20px',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   instructionBox: {
     textAlign: 'left',
@@ -346,7 +346,7 @@ const styles = {
     fontSize: '16px',
     fontWeight: '700',
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

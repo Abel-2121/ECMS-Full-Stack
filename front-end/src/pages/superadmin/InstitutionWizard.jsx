@@ -327,7 +327,7 @@ const styles = {
     color: '#dc2626',
     fontSize: '14px',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   form: { 
     background: 'white', 
@@ -356,7 +356,7 @@ const styles = {
     cursor: 'pointer',
     color: '#1a1a1a',
     transition: 'all 0.2s',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   nextBtn: { 
     display: 'flex', 
@@ -371,7 +371,7 @@ const styles = {
     fontSize: '14px',
     cursor: 'pointer',
     transition: 'all 0.2s',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   submitBtn: { 
     display: 'flex', 
@@ -386,7 +386,7 @@ const styles = {
     fontSize: '14px',
     cursor: 'pointer',
     transition: 'all 0.2s',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   btnFlex: { 
     display: 'flex', 

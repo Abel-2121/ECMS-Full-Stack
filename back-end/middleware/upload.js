@@ -1,6 +1,7 @@
 // const multer = require('multer');
 // const path = require('path');
 // const fs = require('fs');
+
 // const UPLOAD_TYPES = {
 //   AVATAR: { dir: 'uploads/avatars', maxSize: 2 * 1024 * 1024, allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'] },
 //   INSTITUTION_LOGO: { dir: 'uploads/institutions', maxSize: 2 * 1024 * 1024, allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'] },

@@ -29,7 +29,7 @@ export const SuccessScreen = ({ navigate }) => {
             <FiClock size={18} color="#D23A01" />
           </div>
         </div>
-        <h1>My NOmination </h1>
+       
         <button 
           style={styles.primaryBtn} 
           onClick={() => navigate(`/${user.role}/my-nominations`)}
@@ -83,14 +83,14 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   successMessage: { 
     fontSize: '15px', 
     color: '#4b5563', 
     marginBottom: '28px', 
     lineHeight: '1.6',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   infoBox: {
     background: '#f8fafc',
@@ -117,7 +117,6 @@ const styles = {
     cursor: 'pointer', 
     fontWeight: '700',
     fontSize: '15px',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s ease',
     margin: '0 auto'
   }

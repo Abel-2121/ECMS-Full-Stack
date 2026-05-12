@@ -206,7 +206,7 @@ const styles = {
     border: '1px solid #e5e7eb',
     overflow: 'hidden',
     boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   header: {
     padding: '18px 24px',
@@ -430,7 +430,7 @@ const styles = {
     fontWeight: '700', 
     cursor: 'pointer', 
     borderTop: '1px solid #e5e7eb',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptyCard: { 
     padding: 'clamp(32px, 8vw, 48px) clamp(16px, 4vw, 20px)', 
@@ -448,13 +448,13 @@ const styles = {
     fontWeight: '700', 
     color: '#4b5563', 
     margin: '0 0 8px 0',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   emptySubtext: { 
     fontSize: 'clamp(12px, 3vw, 13px)', 
     color: '#9ca3af', 
     margin: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 
@@ -611,7 +611,7 @@ export default PositionLeaderboard;
 //     border: '1px solid #e5e7eb',
 //     overflow: 'hidden',
 //     boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-//     fontFamily: "'Poppins', sans-serif"
+//     
 //   },
 //   header: {
 //     padding: '18px 24px',
@@ -830,7 +830,7 @@ export default PositionLeaderboard;
 //     fontWeight: '700', 
 //     cursor: 'pointer', 
 //     borderTop: '1px solid #e5e7eb',
-//     fontFamily: "'Poppins', sans-serif"
+//     
 //   },
 //   emptyCard: { 
 //     padding: '48px 20px', 
@@ -848,13 +848,13 @@ export default PositionLeaderboard;
 //     fontWeight: '700', 
 //     color: '#4b5563', 
 //     margin: '0 0 8px 0',
-//     fontFamily: "'Poppins', sans-serif"
+//     
 //   },
 //   emptySubtext: { 
 //     fontSize: '13px', 
 //     color: '#9ca3af', 
 //     margin: 0,
-//     fontFamily: "'Poppins', sans-serif"
+//     
 //   }
 // };
 

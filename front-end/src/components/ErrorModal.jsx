@@ -80,7 +80,7 @@ const styles = {
     margin: 0,
     display: 'flex',
     alignItems: 'center',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   closeBtn: {
     background: 'none',
@@ -100,7 +100,7 @@ const styles = {
     fontSize: '16px',
     color: '#1a1a1a',
     marginBottom: 0,
-    fontFamily: "'Poppins', sans-serif",
+   
     lineHeight: '1.5'
   },
   footer: {
@@ -121,7 +121,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+   
   }
 };
 

@@ -43,7 +43,7 @@ const SystemAnalytics = () => {
           borderRadius: '12px',
           boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
           border: `1px solid #D23A01`,
-          fontFamily: "'Poppins', sans-serif"
+          
         }}>
           <p style={{ margin: 0, fontWeight: '700', color: '#1a1a1a', fontSize: '14px' }}>{label}</p>
           {payload.map((entry, index) => (
@@ -343,12 +343,11 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: { 
     fontSize: 'clamp(13px, 2.5vw, 15px)', 
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#07080a',
     fontWeight: '400'
   },
   headerActions: { 
@@ -366,7 +365,6 @@ const styles = {
     background: '#f1f5f9', 
     padding: '8px 16px', 
     borderRadius: '30px',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   refreshBtn: { 
@@ -381,7 +379,6 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '14px', 
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.3s ease'
   },
   kpiGrid: { 
@@ -412,12 +409,11 @@ const styles = {
     fontSize: 'clamp(26px, 5vw, 34px)', 
     fontWeight: '800', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   kpiLabel: { 
     fontSize: 'clamp(12px, 2vw, 14px)', 
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     fontWeight: '500'
   },
   chartsRow: { 
@@ -449,12 +445,12 @@ const styles = {
     display: 'flex', 
     alignItems: 'center', 
     gap: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   chartSubtitle: { 
     fontSize: 'clamp(12px, 2vw, 13px)', 
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   topInstitutionsList: { 
     maxHeight: '340px', 
@@ -471,7 +467,7 @@ const styles = {
     width: '45px', 
     fontWeight: '800', 
     fontSize: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   topInstInfo: { 
     flex: 1 
@@ -480,18 +476,18 @@ const styles = {
     fontSize: '15px', 
     fontWeight: '700', 
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   topInstMeta: { 
     fontSize: '12px', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginTop: '3px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   topInstValue: { 
     fontSize: '16px', 
     fontWeight: '800',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   progressBar: { 
     height: '6px', 
@@ -514,7 +510,6 @@ const styles = {
     color: '#1a1a1a', 
     textAlign: 'center',
     fontWeight: '500',
-    fontFamily: "'Poppins', sans-serif",
     borderLeft: `3px solid #D23A01`
   },
   loaderContainer: { 
@@ -528,7 +523,6 @@ const styles = {
   loaderText: {
     fontSize: '16px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif",
     fontWeight: '500'
   },
   spinner: { 

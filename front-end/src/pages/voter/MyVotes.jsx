@@ -41,7 +41,6 @@ const MyVotes = () => {
     setLoading(true);
     try {
       const data = await voteService.getMyVotes();
-      console.log("Votes data:", data);
       setVotes(data || []);
     } catch (err) {
       console.error('Error loading votes:', err);

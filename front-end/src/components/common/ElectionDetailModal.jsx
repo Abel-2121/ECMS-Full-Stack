@@ -4,7 +4,8 @@ import {
   FiShield, FiClock, FiUsers, FiCheckCircle, FiFileText, 
   FiEdit3, FiBarChart2, FiAward, FiTarget, FiCalendar, 
   FiUserCheck, FiLock, FiAlertCircle, FiInfo, FiList,
-  FiGrid, FiCheck, FiX, FiPlay, FiStar, FiEye
+  FiGrid, FiCheck, FiX, FiPlay, FiStar, FiEye, FiUserPlus,
+  FiXCircle
 } from 'react-icons/fi';
 
 const ElectionDetailModal = ({ election, isOpen, onClose }) => {
@@ -12,10 +13,22 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
 
   const getStatusConfig = (status) => {
     const configs = {
+      // Draft
       draft: { label: 'DRAFT', className: 'status-draft', icon: <FiFileText size={14} /> },
-      registration_open: { label: 'REGISTRATION OPEN', className: 'status-registration_open', icon: <FiEdit3 size={14} /> },
+      
+      // Registration
+      registration_open: { label: 'REGISTRATION OPEN', className: 'status-registration_open', icon: <FiUserPlus size={14} /> },
+      registration_closed: { label: 'REGISTRATION CLOSED', className: 'status-registration_closed', icon: <FiLock size={14} /> },
+      
+      // Nomination
       nomination_open: { label: 'NOMINATION OPEN', className: 'status-nomination_open', icon: <FiEdit3 size={14} /> },
+      nomination_closed: { label: 'NOMINATION CLOSED', className: 'status-nomination_closed', icon: <FiXCircle size={14} /> },
+      
+      // Voting
       voting_open: { label: 'VOTING OPEN', className: 'status-voting_open', icon: <FiShield size={14} /> },
+      voting_closed: { label: 'VOTING CLOSED', className: 'status-voting_closed', icon: <FiClock size={14} /> },
+      
+      // Results
       results_published: { label: 'RESULTS PUBLISHED', className: 'status-results_published', icon: <FiBarChart2 size={14} /> },
       completed: { label: 'COMPLETED', className: 'status-completed', icon: <FiCheckCircle size={14} /> }
     };
@@ -46,12 +59,25 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
 
   const getStatusBg = (status) => {
     switch(status) {
+      // Draft
       case 'draft': return { background: '#f1f5f9', color: '#475569', dotBg: '#94a3b8' };
+      
+      // Registration
       case 'registration_open': return { background: '#D23A0110', color: '#D23A01', dotBg: '#D23A01' };
+      case 'registration_closed': return { background: '#fee2e2', color: '#dc2626', dotBg: '#dc2626' };
+      
+      // Nomination
       case 'nomination_open': return { background: '#02343010', color: '#023430', dotBg: '#023430' };
+      case 'nomination_closed': return { background: '#fee2e2', color: '#dc2626', dotBg: '#dc2626' };
+      
+      // Voting
       case 'voting_open': return { background: '#D23A0110', color: '#D23A01', dotBg: '#D23A01' };
+      case 'voting_closed': return { background: '#fef3c7', color: '#f59e0b', dotBg: '#f59e0b' };
+      
+      // Results & Completed
       case 'results_published': return { background: '#02343010', color: '#023430', dotBg: '#023430' };
-      case 'completed': return { background: '#e5e7eb', color: '#4b5563', dotBg: '#9ca3af' };
+      case 'completed': return { background: '#dcfce7', color: '#166534', dotBg: '#10b981' };
+      
       default: return { background: '#f1f5f9', color: '#475569', dotBg: '#94a3b8' };
     }
   };
@@ -61,6 +87,29 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
   const turnout = election.statistics?.totalEligibleVoters > 0
     ? Math.round((election.statistics.totalVotesCast / election.statistics.totalEligibleVoters) * 100)
     : 0;
+
+  // Determine if voting button should be shown
+  const showVotingButton = election.status === 'voting_open';
+
+  // Get status message for closed states
+  const getStatusMessage = () => {
+    switch(election.status) {
+      case 'registration_closed':
+        return { text: 'Registration period has ended', icon: <FiLock size={16} />, color: '#dc2626' };
+      case 'nomination_closed':
+        return { text: 'Nomination period has ended', icon: <FiXCircle size={16} />, color: '#dc2626' };
+      case 'voting_closed':
+        return { text: 'Voting has ended. Results coming soon.', icon: <FiClock size={16} />, color: '#f59e0b' };
+      case 'results_published':
+        return { text: 'Results are now available', icon: <FiBarChart2 size={16} />, color: '#023430' };
+      case 'completed':
+        return { text: 'This election has been completed', icon: <FiCheckCircle size={16} />, color: '#166534' };
+      default:
+        return null;
+    }
+  };
+
+  const statusMessage = getStatusMessage();
 
   const styles = {
     modalOverlay: {
@@ -87,14 +136,13 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
     },
     modalHeader: {
       padding: '20px',
-      background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+      background: '#023430',
       color: 'white'
     },
     modalElectionTitle: {
       fontSize: '22px',
       fontWeight: '800',
-      marginBottom: '8px',
-      fontFamily: "'Poppins', sans-serif"
+      marginBottom: '8px'
     },
     modalElectionId: {
       fontSize: '12px',
@@ -123,8 +171,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
     modalElectionDesc: {
       fontSize: '14px',
       opacity: 0.85,
-      lineHeight: '1.6',
-      fontFamily: "'Poppins', sans-serif"
+      lineHeight: '1.6'
     },
     modalBody: {
       padding: '20px'
@@ -145,16 +192,14 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
     statCardValue: {
       fontSize: '24px',
       fontWeight: '800',
-      color: '#D23A01',
-      fontFamily: "'Poppins', sans-serif"
+      color: '#D23A01'
     },
     statCardLabel: {
       fontSize: '11px',
-      color: '#4b5563',
+      color: '#000000',
       marginTop: '4px',
       textTransform: 'uppercase',
       letterSpacing: '0.5px',
-      fontFamily: "'Poppins', sans-serif",
       fontWeight: '600'
     },
     timeRemainingBox: {
@@ -174,8 +219,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       color: '#D23A01',
       display: 'flex',
       alignItems: 'center',
-      gap: '8px',
-      fontFamily: "'Poppins', sans-serif"
+      gap: '8px'
     },
     modalSection: {
       marginBottom: '20px'
@@ -189,8 +233,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       alignItems: 'center',
       gap: '8px',
       paddingBottom: '8px',
-      borderBottom: '2px solid #e5e7eb',
-      fontFamily: "'Poppins', sans-serif"
+      borderBottom: '2px solid #e5e7eb'
     },
     timelineGrid: {
       display: 'grid',
@@ -205,17 +248,15 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
     },
     timelineCardLabel: {
       fontSize: '11px',
-      color: '#6b7280',
+      color: '#0e0f11',
       fontWeight: '700',
       textTransform: 'uppercase',
-      marginBottom: '6px',
-      fontFamily: "'Poppins', sans-serif"
+      marginBottom: '6px'
     },
     timelineCardDate: {
       fontSize: '14px',
       fontWeight: '600',
-      color: '#1a1a1a',
-      fontFamily: "'Poppins', sans-serif"
+      color: '#1a1a1a'
     },
     positionsList: {
       display: 'flex',
@@ -233,15 +274,14 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       fontSize: '16px',
       fontWeight: '700',
       color: '#1a1a1a',
-      marginBottom: '6px',
-      fontFamily: "'Poppins', sans-serif"
+      marginBottom: '6px'
     },
     positionMeta: {
       display: 'flex',
       flexWrap: 'wrap',
       gap: '10px',
       fontSize: '12px',
-      color: '#4b5563',
+      color: '#000000',
       marginBottom: '8px'
     },
     positionType: {
@@ -256,9 +296,8 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
     },
     positionDesc: {
       fontSize: '13px',
-      color: '#6b7280',
-      lineHeight: '1.5',
-      fontFamily: "'Poppins', sans-serif"
+      color: '#000000',
+      lineHeight: '1.5'
     },
     eligibilityList: {
       display: 'flex',
@@ -270,8 +309,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       padding: '10px 16px',
       borderRadius: '8px',
       fontSize: '13px',
-      border: '1px solid #e5e7eb',
-      fontFamily: "'Poppins', sans-serif"
+      border: '1px solid #e5e7eb'
     },
     eligibilityLabel: {
       fontWeight: '700',
@@ -290,8 +328,17 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       background: '#f8fafc',
       borderRadius: '30px',
       fontSize: '13px',
-      border: '1px solid #e5e7eb',
-      fontFamily: "'Poppins', sans-serif"
+      border: '1px solid #e5e7eb'
+    },
+    statusMessageBox: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+      padding: '12px 16px',
+      borderRadius: '12px',
+      marginBottom: '20px',
+      background: '#f8fafc',
+      border: '1px solid #e5e7eb'
     },
     modalFooter: {
       padding: '16px 20px',
@@ -313,8 +360,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       fontWeight: '600',
       color: '#4b5563',
       transition: 'all 0.2s',
-      flex: 1,
-      fontFamily: "'Poppins', sans-serif"
+      flex: 1
     },
     voteFromModalBtn: {
       padding: '10px 20px',
@@ -330,8 +376,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: '8px',
-      fontFamily: "'Poppins', sans-serif"
+      gap: '8px'
     }
   };
 
@@ -349,6 +394,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
         </div>
 
         <div style={styles.modalBody}>
+          {/* Time Remaining - Only for voting_open */}
           {election.status === 'voting_open' && (
             <div style={styles.timeRemainingBox}>
               <FiClock size={20} color="#D23A01" />
@@ -358,6 +404,15 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
             </div>
           )}
 
+          {/* Status Message for Closed States */}
+          {statusMessage && (
+            <div style={{ ...styles.statusMessageBox, borderLeft: `4px solid ${statusMessage.color}` }}>
+              {statusMessage.icon}
+              <span style={{ color: statusMessage.color, fontWeight: '500' }}>{statusMessage.text}</span>
+            </div>
+          )}
+
+          {/* Stats Grid */}
           <div style={styles.statsGrid}>
             <div style={styles.statCard}>
               <div style={styles.statCardValue}>{election.positions?.length || 0}</div>
@@ -377,6 +432,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
             </div>
           </div>
 
+          {/* Timeline Section */}
           <div style={styles.modalSection}>
             <div style={styles.sectionTitle}><FiCalendar size={16} /> Timeline</div>
             <div style={styles.timelineGrid}>
@@ -395,6 +451,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
             </div>
           </div>
 
+          {/* Positions Section */}
           <div style={styles.modalSection}>
             <div style={styles.sectionTitle}><FiTarget size={16} /> Positions ({election.positions?.length || 0})</div>
             <div style={styles.positionsList}>
@@ -413,7 +470,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
             </div>
           </div>
 
-          
+          {/* Voting Rules Section */}
           <div style={styles.modalSection}>
             <div style={styles.sectionTitle}><FiLock size={16} /> Voting Rules</div>
             <div style={styles.rulesGrid}>
@@ -430,7 +487,7 @@ const ElectionDetailModal = ({ election, isOpen, onClose }) => {
           >
             Close
           </button>
-          {election.status === 'voting_open' && (
+          {showVotingButton && (
             <button 
               style={styles.voteFromModalBtn}
               onClick={() => {

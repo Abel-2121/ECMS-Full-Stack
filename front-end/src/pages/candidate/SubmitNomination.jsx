@@ -408,12 +408,12 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: {
     fontSize: 'clamp(14px, 3vw, 16px)',
     color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorBanner: { 
     background: '#fee2e2', 
@@ -425,7 +425,7 @@ const styles = {
     alignItems: 'center', 
     gap: '10px',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorClose: { 
     background: 'none', 
@@ -449,20 +449,20 @@ const styles = {
     fontWeight: '600',
     color: '#D23A01',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sectionTitle: {
     fontSize: 'clamp(22px, 5vw, 26px)',
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   sectionDescription: {
     fontSize: '14px',
     color: '#4b5563',
     marginBottom: '24px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionsGrid: {
     display: 'grid',
@@ -484,7 +484,7 @@ const styles = {
     fontSize: '13px',
     color: '#9ca3af',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 

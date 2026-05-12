@@ -1,21 +1,17 @@
+// components/candidate/CandidateModal.jsx
 import React, { useEffect } from 'react';
-import { FiUser, FiFileText, FiMail, FiPhone, FiX } from 'react-icons/fi';
+import { FiUser, FiFileText, FiMail, FiPhone, FiX, FiDownload, FiFile, FiImage, FiFilePlus } from 'react-icons/fi';
 
-// API base URL from environment
-const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:4001';
+const API_BASE_URL = import.meta.env.VITE_API_URL_UPLOAD || 'http://localhost:4001';
 
 const getImageUrl = (imagePath) => {
   if (!imagePath) return null;
   
-  // If it's already a full URL, return as is
   if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
     return imagePath;
   }
-  
-  // Fix Windows backslashes to forward slashes
   const normalizedPath = imagePath.replace(/\\/g, '/');
   
-  // Remove duplicate uploads prefix
   let cleanPath = normalizedPath;
   if (cleanPath.startsWith('uploads/')) {
     cleanPath = cleanPath;
@@ -24,6 +20,46 @@ const getImageUrl = (imagePath) => {
   }
   
   return `${API_BASE_URL}/${cleanPath}`;
+};
+
+// Helper function to get document icon based on file type
+const getDocumentIcon = (fileUrl) => {
+  if (!fileUrl) return <FiFile size={16} />;
+  
+  const ext = fileUrl.split('.').pop()?.toLowerCase();
+  
+  if (ext === 'pdf') return <FiFileText size={16} />;
+  if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) return <FiImage size={16} />;
+  return <FiFilePlus size={16} />;
+};
+
+// Helper function to get document type label
+const getDocumentTypeLabel = (documentType) => {
+  const types = {
+    nomination_form: 'Nomination Form',
+    transcript: 'Academic Transcript',
+    noc: 'No Objection Certificate',
+    recommendation_letter: 'Recommendation Letter',
+    other: 'Other Document'
+  };
+  return types[documentType] || documentType || 'Document';
+};
+
+// Helper function to get file name from URL
+const getFileName = (fileUrl) => {
+  if (!fileUrl) return 'Document';
+  const parts = fileUrl.split(/[\\/]/);
+  return parts[parts.length - 1] || 'Document';
+};
+
+// Helper function to open/view document
+const viewDocument = (fileUrl) => {
+  if (!fileUrl) return;
+  
+  const fullUrl = getImageUrl(fileUrl);
+  
+  // Open in new tab
+  window.open(fullUrl, '_blank');
 };
 
 const CandidateModal = ({ candidate, isOpen, onClose }) => {
@@ -37,10 +73,8 @@ const CandidateModal = ({ candidate, isOpen, onClose }) => {
     return () => document.removeEventListener('keydown', handleEsc);
   }, [onClose]);
 
-  // Get profile image URL from campaignPhoto or photo
   const profileImageUrl = getImageUrl(candidate.campaignPhoto || candidate.photoUrl || candidate.userId?.photo);
   
-  // Get initials for fallback
   const getInitials = () => {
     const firstName = candidate.userId?.firstName || '';
     const lastName = candidate.userId?.lastName || '';
@@ -97,6 +131,47 @@ const CandidateModal = ({ candidate, isOpen, onClose }) => {
             </div>
           )}
 
+          {/* SUPPORTING DOCUMENTS - NEW SECTION */}
+          {candidate.supportingDocuments && candidate.supportingDocuments.length > 0 && (
+            <div style={styles.section}>
+              <div style={styles.sectionTitle}>
+                <FiFilePlus size={18} />
+                Supporting Documents
+              </div>
+              <div style={styles.documentsList}>
+                {candidate.supportingDocuments.map((doc, index) => (
+                  <div key={index} style={styles.documentItem}>
+                    <div style={styles.documentInfo}>
+                      <span style={styles.documentIcon}>
+                        {getDocumentIcon(doc.fileUrl)}
+                      </span>
+                      <div style={styles.documentDetails}>
+                        <span style={styles.documentType}>
+                          {getDocumentTypeLabel(doc.documentType)}
+                        </span>
+                        <span style={styles.documentName}>
+                          {getFileName(doc.fileUrl)}
+                        </span>
+                        {doc.uploadedAt && (
+                          <span style={styles.documentDate}>
+                            Uploaded: {new Date(doc.uploadedAt).toLocaleDateString()}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      style={styles.viewDocumentBtn}
+                      onClick={() => viewDocument(doc.fileUrl)}
+                      title="View Document"
+                    >
+                      <FiDownload size={14} /> View
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* INFO GRID */}
           <div style={styles.infoGrid}>
             <div style={styles.infoItem}>
@@ -147,7 +222,7 @@ const styles = {
     overflowY: 'auto',
     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
     position: 'relative',
-    fontFamily: 'Inter, system-ui, sans-serif'
+  
   },
   heroSection: {
     position: 'relative',
@@ -224,6 +299,76 @@ const styles = {
     lineHeight: '1.6',
     fontWeight: '400'
   },
+  
+  documentsList: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '12px',
+    marginTop: '8px'
+  },
+  documentItem: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '12px 16px',
+    background: '#f8fafc',
+    borderRadius: '12px',
+    border: '1px solid #e2e8f0',
+    transition: 'all 0.2s ease'
+  },
+  documentInfo: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+    flex: 1
+  },
+  documentIcon: {
+    color: '#D23A01',
+    width: '32px',
+    height: '32px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#fff5f0',
+    borderRadius: '8px'
+  },
+  documentDetails: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '4px'
+  },
+  documentType: {
+    fontSize: '12px',
+    fontWeight: '600',
+    color: '#D23A01',
+    textTransform: 'uppercase',
+    letterSpacing: '0.5px'
+  },
+  documentName: {
+    fontSize: '13px',
+    fontWeight: '500',
+    color: '#1e293b',
+    wordBreak: 'break-all'
+  },
+  documentDate: {
+    fontSize: '10px',
+    color: '#94a3b8'
+  },
+  viewDocumentBtn: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '6px',
+    padding: '8px 14px',
+    background: '#D23A01',
+    color: 'white',
+    border: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    fontSize: '12px',
+    fontWeight: '500',
+    transition: 'all 0.2s ease',
+    whiteSpace: 'nowrap'
+  },
   infoGrid: {
     display: 'flex',
     flexDirection: 'column',
@@ -270,15 +415,24 @@ const styles = {
     fontSize: '15px',
     fontWeight: '600',
     cursor: 'pointer',
-    transition: 'background 0.2s'
+    transition: 'background 0.2s',
+    '&:hover': {
+      background: '#D23A01'
+    }
   }
 };
 
-// Add hover effect via CSS
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
   .close-btn:hover {
     background: #D23A01 !important;
+  }
+  .view-doc-btn:hover {
+    background: #b02e00 !important;
+  }
+  .document-item:hover {
+    border-color: #D23A01 !important;
+    box-shadow: 0 2px 8px rgba(210, 58, 1, 0.1);
   }
 `;
 if (!document.head.querySelector('#candidate-modal-styles')) {

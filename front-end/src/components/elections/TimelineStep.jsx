@@ -68,19 +68,7 @@ const TimelineStep = ({ data, onChange }) => {
         )}
       </div>
 
-      {Object.keys(validationErrors).length > 0 && Object.keys(touchedFields).length > 0 && (
-        <div style={styles.errorSummary}>
-          <FiAlertCircle size={18} />
-          <div style={styles.errorSummaryContent}>
-            <strong>Please fix the following issues:</strong>
-            <ul style={styles.errorList}>
-              {Object.entries(validationErrors).map(([field, error]) => (
-                <li key={field}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+      
 
       <div style={styles.timelineGrid}>
         <PhaseCard 

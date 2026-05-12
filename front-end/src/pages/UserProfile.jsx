@@ -6,6 +6,7 @@ import {
   fetchMyProfile, updateProfile, changePassword, 
   uploadAvatar, removeAvatar, clearSuccess, clearError 
 } from '../Js/user-slice';
+import { updateUser } from '../Js/auth-slice';
 import { 
   FiUser, FiMail, FiPhone, FiMapPin, FiCamera, 
   FiSave, FiLock, FiCheckCircle, FiAlertCircle, 
@@ -99,16 +100,23 @@ const UserProfile = () => {
 
   const handleSaveAvatar = async () => {
     if (avatarFile) {
-      await dispatch(uploadAvatar(avatarFile));
-      setAvatarFile(null);
-      setAvatarPreview(null);
-      showToast('Avatar updated successfully!', 'success');
+      const result = await dispatch(uploadAvatar(avatarFile));
+      if (result.meta.requestStatus === 'fulfilled') {
+     
+        dispatch(updateUser(result.payload));
+        setAvatarFile(null);
+        setAvatarPreview(null);
+        showToast('Avatar updated successfully!', 'success');
+      }
     }
   };
 
   const handleRemoveAvatar = async () => {
-    await dispatch(removeAvatar());
-    showToast('Avatar removed successfully!', 'success');
+    const result = await dispatch(removeAvatar());
+    if (result.meta.requestStatus === 'fulfilled') {
+      dispatch(updateUser(result.payload));
+      showToast('Avatar removed successfully!', 'success');
+    }
   };
 
   const handleUpdateProfile = async (e) => {
@@ -462,12 +470,12 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: { 
     fontSize: '15px', 
     color: '#4a5568',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   toast: { 
     position: 'fixed', 
@@ -533,7 +541,7 @@ const styles = {
     fontSize: '48px', 
     fontWeight: '700', 
     color: 'white',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   uploadLabel: { 
     position: 'absolute', 
@@ -599,7 +607,7 @@ const styles = {
     fontWeight: '800', 
     color: '#1a1a1a', 
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   userEmail: { 
     fontSize: '14px', 
@@ -663,7 +671,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '10px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   editBtn: { 
     display: 'flex', 

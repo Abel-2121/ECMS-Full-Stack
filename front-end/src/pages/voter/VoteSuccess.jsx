@@ -185,20 +185,20 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   subtitle: {
     fontSize: '15px',
     color: '#4b5563',
     marginBottom: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   electionName: {
     fontSize: '18px',
     fontWeight: '700',
     color: '#D23A01',
     marginBottom: '32px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   confirmationBox: {
     background: '#f8fafc',
@@ -224,7 +224,6 @@ const styles = {
   codeText: {
     fontSize: '18px',
     fontWeight: '700',
-    fontFamily: 'monospace',
     color: '#1a1a1a',
     background: 'white',
     padding: '10px 18px',

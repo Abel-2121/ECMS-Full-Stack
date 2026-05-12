@@ -128,12 +128,12 @@ const userSlice = createSlice({
         state.error = action.payload;
       })
       
-      // Upload Avatar
+      // Upload Avatar - Keep as is, will be handled in component
       .addCase(uploadAvatar.fulfilled, (state, action) => {
         state.user = action.payload;
       })
       
-      // Remove Avatar
+      // Remove Avatar - Keep as is, will be handled in component
       .addCase(removeAvatar.fulfilled, (state, action) => {
         state.user = action.payload;
       });

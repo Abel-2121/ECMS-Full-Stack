@@ -175,7 +175,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 'clamp(20px, 5vw, 32px)',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   // Loading Card
   card: {
@@ -196,13 +196,13 @@ const styles = {
     fontWeight: '800',
     color: '#1a1a1a',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   message: {
     fontSize: '15px',
     color: '#6b7280',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   // Confirmation Card
   confirmCard: {
@@ -224,7 +224,7 @@ const styles = {
     color: '#f59e0b',
     textAlign: 'center',
     marginBottom: '24px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   warningBox: {
     background: '#fffbeb',
@@ -241,7 +241,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   warningList: {
     color: '#78350f',
@@ -249,7 +249,7 @@ const styles = {
     paddingLeft: '20px',
     margin: 0,
     lineHeight: '1.7',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   detailsBox: {
     background: '#f8fafc',
@@ -263,7 +263,7 @@ const styles = {
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   detailRow: {
     display: 'flex',
@@ -280,13 +280,13 @@ const styles = {
     alignItems: 'center',
     gap: '6px',
     fontWeight: '600',
-    color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   detailValue: {
     fontWeight: '600',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   buttonGroup: {
     display: 'flex',
@@ -308,7 +308,6 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   denyButton: {
@@ -325,15 +324,14 @@ const styles = {
     fontSize: '14px',
     fontWeight: '700',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   },
   footerNote: {
     fontSize: '12px',
-    color: '#9ca3af',
+    color: '#000000',
     textAlign: 'center',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   // Success Card
   successCard: {
@@ -362,19 +360,19 @@ const styles = {
     fontWeight: '800',
     color: '#10b981',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   successMessage: {
     fontSize: '15px',
-    color: '#4b5563',
+    color: '#000000',
     marginBottom: '16px',
     lineHeight: '1.5',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   note: {
     fontSize: '13px',
-    color: '#9ca3af',
-    fontFamily: "'Poppins', sans-serif"
+    color: '#000000',
+    
   },
   // Error Card
   errorCard: {
@@ -403,13 +401,13 @@ const styles = {
     fontWeight: '800',
     color: '#dc2626',
     marginBottom: '12px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorMessage: {
     fontSize: '15px',
-    color: '#4b5563',
+    color: '#000000',
     marginBottom: '24px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   button: {
     padding: '12px 28px',
@@ -420,7 +418,6 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     cursor: 'pointer',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'all 0.2s'
   }
 };

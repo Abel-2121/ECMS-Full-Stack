@@ -169,14 +169,14 @@ export const CampaignInfoStep = ({
           rows={6} 
           style={{
             ...styles.textarea,
-            borderColor: displayError('manifesto') ? '#dc2626' : '#e5e7eb'
+            borderColor: displayError('manifesto') ? '#dc2626' : '#969aa3'
           }} 
           placeholder="Describe your goals, promises, and what you plan to achieve if elected... (15-60 words)"
         />
         <div style={styles.wordCountContainer}>
           <span style={{
             ...styles.wordCount,
-            color: manifestoWordCount > 0 ? (isManifestoValid ? '#10b981' : '#dc2626') : '#9ca3af'
+            color: manifestoWordCount > 0 ? (isManifestoValid ? '#10b981' : '#dc2626') : '#6d727c'
           }}>
             <FiFileText size={12} /> {manifestoWordCount} / 60 words (minimum 15)
           </span>
@@ -207,7 +207,7 @@ export const CampaignInfoStep = ({
         <div style={styles.wordCountContainer}>
           <span style={{
             ...styles.wordCount,
-            color: biographyWordCount > 0 ? (isBiographyValid ? '#10b981' : '#dc2626') : '#9ca3af'
+            color: biographyWordCount > 0 ? (isBiographyValid ? '#10b981' : '#dc2626') : '#707a8a'
           }}>
             <FiFileText size={12} /> {biographyWordCount} / 40 words (minimum 15)
           </span>
@@ -230,14 +230,14 @@ export const CampaignInfoStep = ({
           onBlur={() => handleBlur('slogan')}
           style={{
             ...styles.input,
-            borderColor: displayError('slogan') ? '#dc2626' : '#e5e7eb'
+            borderColor: displayError('slogan') ? '#dc2626' : '#3e4044'
           }} 
           placeholder="Your campaign slogan (e.g., 'Vote for Change!') (2-5 words)" 
         />
         <div style={styles.wordCountContainer}>
           <span style={{
             ...styles.wordCount,
-            color: formData.slogan ? (isSloganValid ? '#10b981' : '#dc2626') : '#9ca3af'
+            color: formData.slogan ? (isSloganValid ? '#10b981' : '#dc2626') : '#292a2c'
           }}>
             <FiCheckCircle size={12} /> {sloganWordCount} / 5 words (minimum 2)
           </span>
@@ -415,32 +415,32 @@ const styles = {
     background: 'none', 
     border: 'none', 
     cursor: 'pointer', 
-    color: '#6b7280', 
+    color: '#000000', 
     marginBottom: '12px',
     fontSize: '14px',
     fontWeight: '500',
     padding: 0,
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   positionTitle: {
     fontSize: 'clamp(18px, 4vw, 20px)',
     fontWeight: '700',
     color: '#1a1a1a',
     marginBottom: '6px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   requiredHint: {
     fontSize: '12px',
-    color: '#6b7280',
+    color: '#0d0e0f',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   requiredStar: {
     color: '#dc2626',
     fontSize: '14px'
   },
   optionalStar: {
-    color: '#9ca3af',
+    color: '#000000',
     fontSize: '12px',
     fontWeight: '400'
   },
@@ -453,7 +453,7 @@ const styles = {
     marginBottom: '8px', 
     color: '#1a1a1a',
     fontSize: '14px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   input: { 
     width: '100%', 
@@ -462,7 +462,6 @@ const styles = {
     borderRadius: '12px', 
     fontSize: '14px', 
     transition: 'border-color 0.2s',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none'
   },
   textarea: { 
@@ -472,7 +471,6 @@ const styles = {
     borderRadius: '12px', 
     resize: 'vertical', 
     fontSize: '14px', 
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none'
   },
   wordCountContainer: {
@@ -486,7 +484,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   errorText: {
     fontSize: '11px',
@@ -494,7 +492,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Progress Section
@@ -521,7 +519,7 @@ const styles = {
     fontSize: '12px',
     fontWeight: '600',
     color: '#D23A01',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Photo Styles
@@ -534,7 +532,7 @@ const styles = {
   photoSquareBox: {
     width: '200px',
     height: '200px',
-    border: '2px dashed #cbd5e1',
+    border: '2px dashed #808488',
     borderRadius: '16px',
     display: 'flex',
     flexDirection: 'column',
@@ -548,15 +546,15 @@ const styles = {
   },
   photoUploadText: {
     fontSize: '12px',
-    color: '#6b7280',
+    color: '#000000',
     marginTop: '8px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoHint: {
     fontSize: '10px',
-    color: '#9ca3af',
+    color: '#000000',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoPreviewContainer: {
     position: 'relative'
@@ -589,7 +587,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '11px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   photoRemoveBtn: {
     display: 'flex',
@@ -603,7 +601,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '11px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Document Styles
@@ -622,8 +620,7 @@ const styles = {
     cursor: 'pointer', 
     fontSize: '13px',
     fontWeight: '600',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     transition: 'all 0.2s'
   },
   documentList: { 
@@ -639,7 +636,7 @@ const styles = {
     padding: '10px 14px', 
     background: '#f8fafc', 
     borderRadius: '10px', 
-    border: '1px solid #e5e7eb'
+    border: '1px solid #686a6e'
   },
   documentInfo: { 
     flex: 1, 
@@ -652,7 +649,7 @@ const styles = {
     fontSize: '13px',
     fontWeight: '500',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   documentTypeBadge: { 
     fontSize: '10px', 
@@ -661,7 +658,7 @@ const styles = {
     color: '#D23A01', 
     borderRadius: '12px',
     fontWeight: '600',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   removeDocBtn: { 
     background: 'none', 
@@ -699,26 +696,25 @@ const styles = {
     fontWeight: '700',
     marginBottom: '12px',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownFile: {
     fontSize: '13px',
-    color: '#6b7280',
+    color: '#45484e',
     marginBottom: '16px',
     padding: '10px',
     backgroundColor: '#f8fafc',
     borderRadius: '8px',
     wordBreak: 'break-all',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownSelect: {
     width: '100%',
     padding: '12px',
-    border: '2px solid #e5e7eb',
+    border: '2px solid #6d7077',
     borderRadius: '10px',
     fontSize: '14px',
     marginBottom: '20px',
-    fontFamily: "'Poppins', sans-serif",
     outline: 'none'
   },
   dropdownActions: {
@@ -732,10 +728,10 @@ const styles = {
     border: 'none',
     borderRadius: '8px',
     cursor: 'pointer',
-    color: '#4b5563',
+    color: '#030303',
     fontWeight: '600',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   dropdownConfirmBtn: {
     padding: '10px 18px',
@@ -746,7 +742,7 @@ const styles = {
     color: 'white',
     fontWeight: '700',
     fontSize: '13px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   
   // Action Buttons
@@ -770,7 +766,6 @@ const styles = {
     alignItems: 'center', 
     justifyContent: 'center',
     gap: '8px',
-    fontFamily: "'Poppins', sans-serif",
     transition: 'background 0.2s'
   },
   secondaryBtn: { 
@@ -782,8 +777,7 @@ const styles = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '600',
-    color: '#4b5563',
-    fontFamily: "'Poppins', sans-serif",
+    color: '#000000',
     transition: 'all 0.2s'
   }
 };

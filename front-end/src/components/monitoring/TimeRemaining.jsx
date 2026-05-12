@@ -94,7 +94,7 @@ const styles = {
     fontWeight: '600',
     color: '#6b7280',
     marginBottom: '16px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   countdownGrid: {
     display: 'grid',
@@ -114,7 +114,7 @@ const styles = {
     fontWeight: '600',
     color: '#6b7280',
     marginTop: '4px',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   expiredCard: {
     display: 'flex',
@@ -132,12 +132,12 @@ const styles = {
     fontSize: '16px',
     fontWeight: '700',
     color: '#1a1a1a',
-    fontFamily: "'Poppins', sans-serif"
+    
   },
   expiredSubtitle: {
     fontSize: '13px',
     color: '#6b7280',
-    fontFamily: "'Poppins', sans-serif"
+    
   }
 };
 
