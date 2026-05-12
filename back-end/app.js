@@ -9,7 +9,7 @@ const errorHandler = require('./middleware/errorHandler');
 // Import routes
 const userRouter = require('./route/userRoute');
 const electionRoute = require('./route/electionRoute');
-const institutionRoute = require('./route/institutionRoute');
+const institutionRoute = require('./route/InstitutionRoute');
 const candidateRoute = require('./route/candidateRoute');
 const voteRoute = require('./route/votesRoute');
 const voterEligibilityRoute = require('./route/voterEligibility');
